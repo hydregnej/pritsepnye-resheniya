@@ -1,14 +1,19 @@
 [tool.poetry]
-name = "backend"
+name = "backend-server"
 version = "0.1.0"
 description = ""
-authors = ["4got10king <Aldavletshina77654@yandex.ru>"]
+authors = ["Adel, Ivan <a4got10king@gmail.com>"]
 readme = "README.md"
 
+
 [tool.poetry.dependencies]
-python = "^3.12"
-django = "^5.0.6"
-django-rest-framework = "^0.1.0"
+python = "^3.8"
+asgiref = "^3.8.1"
+django = "^5.0.3"
+djangorestframework = "^3.15.1"
+psycopg2-binary = "^2.9.9"
+sqlparse = "^0.4.4"
+typing-extensions = "^4.10.0"
 
 
 [build-system]
