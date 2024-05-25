@@ -7,7 +7,7 @@ readme = "README.md"
 
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.12"
 asgiref = "^3.8.1"
 django = "^5.0.3"
 djangorestframework = "^3.15.1"
