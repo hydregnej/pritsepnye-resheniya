@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views
+from .views import KatalogListView, OrderCreateView, NewsCreateView
 
 urlpatterns = [
-    path('katalog/', views.katalog_list, name='katalog-list'),
-    path('create-news/', views.create_news, name='create-news'),
-    path('create-order/', views.create_order, name='create-order'),
+    path('katalog/', KatalogListView.as_view(), name='katalog-list'),
+    path('news/', NewsCreateView.as_view(), name='create-news'),
+    path('order/', OrderCreateView.as_view(), name='create-order'),
 ]

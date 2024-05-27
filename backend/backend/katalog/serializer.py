@@ -6,14 +6,21 @@ class KatalogSerializer(serializers.ModelSerializer):
         model = Katalog
         fields = '__all__'
 
-class NewsSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = News
-        fields = '__all__'
-
 class OrderSerializer(serializers.ModelSerializer):
-    pricep = KatalogSerializer()
+    katalog = KatalogSerializer(read_only=True, source='pricep')
 
     class Meta:
         model = Order
+        fields = '__all__'
+
+    def create(self, validated_data):
+        pricep_id = self.initial_data.get('pricep')
+        pricep = Katalog.objects.get(id=pricep_id)
+        validated_data.pop('pricep', None)
+        order = Order.objects.create(pricep=pricep, **validated_data)
+        return order
+
+class NewsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = News
         fields = '__all__'
