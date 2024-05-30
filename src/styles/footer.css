@@ -1,0 +1,169 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  /* margin-bottom: 500px; */
+}
+
+.footer__icon {
+  width: 43px;
+  height: 43px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__contacts {
+  font-weight: 500;
+  font-size: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.footer__info-block {
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+}
+
+.footer__info-block_none-cursor {
+  cursor: default;
+}
+
+.footer__info {
+  margin: 5px 0;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__icon_tg {
+  width: 54px;
+  height: 54px;
+}
+
+.footer__icon_wa {
+  width: 54px;
+  height: 54px;
+}
+
+.footer__center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 400px;
+  gap: 20px;
+}
+
+.footer__logo {
+  width: 450px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footer__subscribe-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__label {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.footer__input-group {
+  display: flex;
+  /* width: 613px;
+  height: 87px; */
+}
+
+.footer__input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  /* border-radius: 4px 0px 0px 4px; */
+  border-radius: 10px;
+  width: 295px;
+  height: 86px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.footer__button {
+  padding: 10px 20px;
+  border: none;
+  /* border-radius: 0px 4px 4px 0px; */
+  border-radius: 10px;
+  background-color: #e53935;
+  color: #fff;
+  cursor: pointer;
+  width: 295px;
+  height: 86px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.footer__links {
+  display: flex;
+  gap: 50px;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer__list-item {
+  margin: 5px 0;
+}
+
+.footer__link {
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__copyright {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer__copyright-text {
+  margin-top: 100px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 75%;
+  text-align: center;
+  color: #fff;
+  opacity: 0.8;
+}

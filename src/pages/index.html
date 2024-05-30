@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Прицепные Решения</title>
+  <!-- не забудь вставить иконку на вкладку -->
+  <!-- <link rel="shortcut icon" href="./icons/logo-black.png" type="image/x-icon"> -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+</head>
+
+<body>
+  <div class="moving-btn">
+    <div class="moving-btn__social whatsapp"><img src="./icons/icon-sticky-whatsapp.svg" class="moving-btn__social-logo"
+        alt="whatsapp">
+      <span class="moving-btn__social-whatsapp tooltip"><a href="#" class="moving-btn__social-link">Whatsapp</a></span>
+    </div>
+    <div class="moving-btn__social telegram"><img src="./icons/icon-sticky-telegram.svg" class="moving-btn__social-logo"
+        alt="telegram">
+      <span class="moving-btn__social-telegram tooltip"><a href="#" class="moving-btn__social-link">ТЕЛЕГРАММ</a></span>
+    </div>
+    <div class="moving-btn__social email"><img src="./icons/icon-sticky-email.svg" class="moving-btn__social-logo"
+        alt="email">
+      <span class="moving-btn__social-email tooltip"><a href="mailto:pricepresh74@mail.ru"
+          class="moving-btn__social-link">ПОЧТА</a></span>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header-container container">
+        <div class="animated-logo">
+          <div class="animated-logo__up-short-line"></div>
+          <div class="animated-logo__up-long-line"></div>
+          <span class="animated-logo__text">Прицепные решения ДТ</span>
+          <div class="animated-logo__down-long-line"></div>
+          <div class="animated-logo__down-short-line"></div>
+        </div>
+        <nav class="nav-header" aria-label=" Основное меню">
+          <ul class="nav-header__menu-links">
+            <li class="nav-header__item nav-header__item--dropdown-catalog"><a href="#"
+                class="nav-header__link">Каталог</a>
+              <div class="header-menu__unwrap">
+                <ul class="header-menu__lists">
+                  <li class="header-menu__item"><a href="#" class="header-menu__link">Низкорамные</a></li>
+                  <li class="header-menu__item"><a href="#" class="header-menu__link">Высокорамные</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-header__item"><a href="#" class="nav-header__link">Наличие</a></li>
+            <li class="nav-header__item nav-header__item--dropdown-about"><a href="./about.html" class="nav-header__link">О нас</a>
+              <div class="header-menu__unwrap">
+                <ul class="header-menu__lists">
+                  <li class="header-menu__item"><a href="#" class="header-menu__link">О компании</a></li>
+                  <li class="header-menu__item"><a href="#" class="header-menu__link">Производство</a></li>
+                  <li class="header-menu__item"><a href="#" class="header-menu__link">Новости</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-header__item"><a href="#" class="nav-header__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="social-header">
+          <a href="#" class="social-header__link"><img src="./icons/icon_telegram.svg" class="social-header__telegram"
+              alt="Telegram"></a>
+          <a href="#" class="social-header__link"><img src="./icons/icon_whatsapp.svg" class="social-header__whatsapp"
+              alt="Whatsapp"></a>
+        </div>
+        <div class="info-header">
+          <a href="tel:+78005051323" class="info-header__call">8 800 505-13-23</a>
+          <a href="mailto:pricepresh74@mail.ru" class="info-header__email">pricepresh74@mail.ru</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main__slider">
+        <div class="swiper hero-swiper" id="hero-slider">
+          <div class="swiper-wrapper hero-swiper-wrapper">
+            <div class="swiper-slide hero-swiper-slide">
+              <h2 class="hero-slider__title">Низкорамные полуприцепы-тяжеловозовы</h2>
+              <img class="hero-slider__slide" src="./image/the_truck_one.jpg" alt="The truck">
+            </div>
+            <div class="swiper-slide hero-swiper-slide">
+              <h2 class="hero-slider__title">Низкорамные полуприцепы-тяжеловозовы</h2>
+              <img class="hero-slider__slide" src="./image/the_truck_one.jpg" alt="The truck">
+            </div>
+            <div class="swiper-slide hero-swiper-slide">
+              <h2 class="hero-slider__title">Низкорамные полуприцепы-тяжеловозовы</h2>
+              <img class="hero-slider__slide" src="./image/the_truck_one.jpg" alt="The truck">
+            </div>
+            <div class="swiper-slide hero-swiper-slide">
+              <h2 class="hero-slider__title">Низкорамные полуприцепы-тяжеловозовы</h2>
+              <img class="hero-slider__slide" src="./image/the_truck_one.jpg" alt="The truck">
+            </div>
+          </div>
+          <div class="swiper-pagination hero-swiper-pagination" id="hero-slider__pignation-bullet"></div>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <div class="container">
+          <div class="catalog__title-container">
+            <span class="catalog__title">Каталог полуприцепов</span>
+          </div>
+          <div class="catalog__options">
+            <ul class="catalog__options-list">
+              <li class="catalog__options-list-item js-catalog__options-list-item--active" data-tab="low">
+                Низкорамные
+              </li>
+              <li class="catalog__options-list-item js-catalog__options-list-item--inactive" data-tab="high">
+                Высокорамные
+              </li>
+              <li class="catalog__options-list-item js-catalog__options-list-item--inactive" data-tab="board">
+                Бортовые</li>
+              <li class="catalog__options-list-item js-catalog__options-list-item--inactive" data-tab="chassis">
+                Шасси под
+                монтаж</li>
+            </ul>
+          </div>
+          <div class="catalog__container">
+          </div>
+          <div class="btn__catalog">
+            <button class="btn__learn-more">смотреть все</button>
+          </div>
+        </div>
+      </section>
+      <section class="in-stock">
+        <div class="container">
+          <div class="in-stock__title-container">
+            <span class="in-stock__title" id="animate-title">Полуприцепы в наличии</span>
+          </div>
+          <div class="in-stock__container">
+          </div>
+          <button class="btn__learn-more">смотреть все</button>
+        </div>
+      </section>
+
+        <!-- Андрей начало-->
+        <section class="container feedback">
+        <h2 class="feedback__h2">Оставьте заявку для оформления заказа</h2>
+
+        <form class="feedback__form">
+
+          <div class="feedback__wrapper">
+            <div class="feedback__block-left">
+              <div class="feedback__input-block">
+                <label for="name" class="feedback__label feedback__label-required">Ваше имя</label>
+                <input type="text" id="name" name="name" class="feedback__input" placeholder="Введите ФИО" required>
+              </div>
+              <div class="feedback__input-block">
+                <label for="phone" class="feedback__label feedback__label-required">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" class="feedback__input" placeholder="+7(___)___-__-__"
+                  required>
+              </div>
+              <div class="feedback__input-block">
+                <label for="email" class="feedback__label feedback__label-required">Почта</label>
+                <input type="email" id="email" name="email" class="feedback__input" placeholder="Введите вашу почту"
+                  required>
+                <p class="feedback__validate-text">* обязательные поля</p>
+
+              </div>
+            </div>
+            <div class="feedback__block-right">
+              <div class="feedback__input-block">
+                <label for="subject" class="feedback__label">Тема</label>
+                <input type="text" id="subject" name="subject" class="feedback__input" placeholder="Самосвал SHACMAN">
+              </div>
+              <div class="feedback__input-block">
+                <label for="message" class="feedback__label">Ваше сообщение</label>
+                <textarea id="message" name="message" class="feedback__input feedback__input-message"
+                  placeholder="Хочу оформить доставку на самосвал" rows="4" required></textarea>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="feedback__btn">Отправить</button>
+        </form>
+      </section>
+
+
+        <!-- НЕ ЗАБУДЬ ДОБАВИТЬ МОДАЛЬНОЕ ОКНО ПРИ УСПЕШНОМ ОТПРАВЛЕНИИ -->
+
+        <!-- Андрей конец-->
+
+      </section>
+      <section class="news">
+        <div class="container news__container">
+          <div class="news__title">Новости</div>
+          <div class="news__wrapper">
+            <div class="swiper news-swiper">
+              <div class="swiper-wrapper news-swiper-wrapper"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          
+          <button class="news__btn-all"><a class="news__btn-all-link" href="./news.html">все новости</a></button>
+        </div>
+      </section>
+      <section class="map">
+          <div class="map__container"></div>
+          <div style="position:relative;overflow:hidden;"><a
+              href="https://yandex.ru/maps/56/chelyabinsk/?utm_medium=mapframe&utm_source=maps"
+              style="color:#eee;font-size:12px;position:absolute;top:0px;">Челябинск</a><a
+              href="https://yandex.ru/maps/56/chelyabinsk/house/ulitsa_engelsa_44d/YkgYdQBpSUMEQFtvfX10cnhnYw==/?ll=61.373703%2C55.152021&utm_medium=mapframe&utm_source=maps&z=15.03"
+              style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Энгельса, 44Д — Яндекс
+              Карты</a><iframe
+              src="https://yandex.ru/map-widget/v1/?ll=61.373703%2C55.152021&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjA0NjU2NhJD0KDQvtGB0YHQuNGPLCDQp9C10LvRj9Cx0LjQvdGB0LosINGD0LvQuNGG0LAg0K3QvdCz0LXQu9GM0YHQsCwgNDTQlCIKDSqEdUIVIZ1cQg%2C%2C&z=15.03"
+              width="100%" height="700" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+          </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <div class="footer__contacts">
+          <h3 class="footer__title">Контактные данные</h3>
+
+          <a href="tel:88005051323" class="footer__link footer__info-block">
+            <img src="./icons/Phone.svg" alt="Номер телефона Прицепные Решения" class="footer__icon">
+            <p class="footer__info"> 8 800 505-13-23</p>
+          </a>
+
+
+          <a href="" class="footer__link footer__info-block">
+            <img src="./icons/Map Marker.svg" alt="Адрес компании Прицепные Решения" class="footer__icon">
+            <p class="footer__info"> г. Челябинск, ул. Автодорожная, <br> д. 17, офис 205</p>
+          </a>
+
+
+          <div href="" class="footer__info-block footer__info-block_none-cursor">
+            <img src="./icons/Clock.svg" alt="Режим работы Прицепные Решения" class="footer__icon">
+            <p class="footer__info"> пн-пт с 8:30 до 17:30</p>
+          </div>
+
+
+          <a href="mailto:pricepresh74@mail.ru" class="footer__link footer__info-block">
+            <img src="./icons/Send Email.svg" alt="Почта Прицепные Решения" class="footer__icon">
+            <p class="footer__info"> pricepresh74@mail.ru</p>
+          </a>
+
+          <div class="footer__social">
+            <a href="#" class="footer__social-link"><img src="./icons/Whatsapp.svg" alt="WhatsApp Прицепные Решения"
+                class="footer__icon footer__icon_tg"></a>
+            <a href="#" class="footer__social-link"><img src="./icons/Telegram.svg" alt="Telegram Прицепные Решения"
+                class="footer__icon footer__icon_wa"></a>
+          </div>
+        </div>
+        <div class="footer__center">
+          <a href="#"><img src="./icons/footer-logo-pricepnie-risheniya.svg" alt="Логотип Прицепные Решения"
+              class="footer__logo"></a>
+          <form class="footer__subscribe-form">
+            <label for="email" class="footer__label">Подпишитесь на нашу рассылку</label>
+            <div class="footer__input-group">
+              <input type="email" id="email" class="footer__input" placeholder="Напишите ваш e-mail">
+              <button class="footer__button">Подписаться</button>
+            </div>
+          </form>
+          <div class="footer__copyright">
+            <p class="footer__copyright-text">© 2024 Прицепные решения ДТ</p>
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__column">
+            <h3 class="footer__title">Прицепы</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#" class="footer__link">Низкорамные</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Высокорамные</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__title">Быстрый доступ</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#" class="footer__link">Каталог</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Наличие</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">О нас</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+/* Страница о нас */
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat Regular", sans-serif;
+}
+
+body {
+  width: 100%;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 20px;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.section__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.section__image {
+  flex: 1 1 50%;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.section__text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  line-height: 150%;
+  flex: 1 1 50%;
+  padding: 10px;
+}
+
+.section__text p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section__content {
+    flex-direction: column;
+  }
+}
