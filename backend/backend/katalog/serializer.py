@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Katalog, Order, News
+from .models import Katalog, Order, Sub, News
 
 class KatalogSerializer(serializers.ModelSerializer):
     class Meta:
@@ -19,6 +19,11 @@ class OrderSerializer(serializers.ModelSerializer):
         validated_data.pop('pricep', None)
         order = Order.objects.create(pricep=pricep, **validated_data)
         return order
+
+class SubSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Sub
+        fields = '__all__'
 
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:

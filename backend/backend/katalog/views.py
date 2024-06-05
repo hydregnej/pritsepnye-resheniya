@@ -1,13 +1,8 @@
-# from rest_framework import status
-# from rest_framework.response import Response
-# from rest_framework.decorators import api_view
-# from .models import Katalog
-# from .serializer import KatalogSerializer, NewsSerializer, OrderSerializer
-
 from rest_framework import generics, status
 from rest_framework.response import Response
-from .models import Katalog, Order, News
-from .serializer import KatalogSerializer, OrderSerializer, NewsSerializer
+from .models import Katalog, Order, Sub, News
+from .serializer import KatalogSerializer, OrderSerializer, SubSerializer, NewsSerializer
+
 
 
 class KatalogListView(generics.ListAPIView):
@@ -27,36 +22,10 @@ class OrderCreateView(generics.CreateAPIView):
         #response_data['pricep'] = katalog_data
         return Response(response_data, status=status.HTTP_201_CREATED)
 
-class NewsCreateView(generics.CreateAPIView):
+class SubCreateView(generics.CreateAPIView):
+    queryset = Sub.objects.all()
+    serializer_class = SubSerializer
+
+class NewsListView(generics.ListAPIView):
     queryset = News.objects.all()
     serializer_class = NewsSerializer
-
-
-# @api_view(['GET'])
-# def katalog_list(request):
-#     if request.method == 'GET':
-#         katalogs = Katalog.objects.all()
-#         serializer = KatalogSerializer(katalogs, many=True)
-#         return Response(serializer.data)
-#
-#
-# @api_view(['POST'])
-# def create_news(request):
-#     if request.method == 'POST':
-#         serializer = NewsSerializer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data, status=status.HTTP_201_CREATED)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-#
-#
-# @api_view(['POST'])
-# def create_order(request):
-#     if request.method == 'POST':
-#         serializer = OrderSerializer(data=request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             order_instance = serializer.instance
-#             serializer_with_katalog = OrderSerializer(order_instance)
-#             return Response(serializer_with_katalog.data, status=status.HTTP_201_CREATED)
-#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
