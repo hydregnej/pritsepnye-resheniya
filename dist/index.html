@@ -36,13 +36,13 @@
   <div class="wrapper">
     <header class="header">
       <div class="header-container container">
-        <div class="animated-logo">
+        <a href="./index.html" class="animated-logo">
           <div class="animated-logo__up-short-line"></div>
           <div class="animated-logo__up-long-line"></div>
           <span class="animated-logo__text">Прицепные решения ДТ</span>
           <div class="animated-logo__down-long-line"></div>
           <div class="animated-logo__down-short-line"></div>
-        </div>
+        </a>
         <nav class="nav-header" aria-label=" Основное меню">
           <ul class="nav-header__menu-links">
             <li class="nav-header__item nav-header__item--dropdown-catalog"><a href="#"
@@ -55,7 +55,8 @@
               </div>
             </li>
             <li class="nav-header__item"><a href="./vse-v-nalichii.html" class="nav-header__link">Наличие</a></li>
-            <li class="nav-header__item nav-header__item--dropdown-about"><a href="./about.html" class="nav-header__link">О нас</a>
+            <li class="nav-header__item nav-header__item--dropdown-about"><a href="./about.html"
+                class="nav-header__link">О нас</a>
               <div class="header-menu__unwrap">
                 <ul class="header-menu__lists">
                   <li class="header-menu__item"><a href="#" class="header-menu__link">О компании</a></li>
@@ -143,8 +144,8 @@
         </div>
       </section>
 
-        <!-- Андрей начало-->
-        <section class="container feedback">
+      <!-- Андрей начало-->
+      <section class="container feedback">
         <h2 class="feedback__h2">Оставьте заявку для оформления заказа</h2>
 
         <form class="feedback__form">
@@ -186,9 +187,9 @@
       </section>
 
 
-        <!-- НЕ ЗАБУДЬ ДОБАВИТЬ МОДАЛЬНОЕ ОКНО ПРИ УСПЕШНОМ ОТПРАВЛЕНИИ -->
+      <!-- НЕ ЗАБУДЬ ДОБАВИТЬ МОДАЛЬНОЕ ОКНО ПРИ УСПЕШНОМ ОТПРАВЛЕНИИ -->
 
-        <!-- Андрей конец-->
+      <!-- Андрей конец-->
 
       </section>
       <section class="news">
@@ -201,21 +202,21 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
-          
+
           <button class="news__btn-all"><a class="news__btn-all-link" href="./news.html">все новости</a></button>
         </div>
       </section>
       <section class="map">
-          <div class="map__container"></div>
-          <div style="position:relative;overflow:hidden;"><a
-              href="https://yandex.ru/maps/56/chelyabinsk/?utm_medium=mapframe&utm_source=maps"
-              style="color:#eee;font-size:12px;position:absolute;top:0px;">Челябинск</a><a
-              href="https://yandex.ru/maps/56/chelyabinsk/house/ulitsa_engelsa_44d/YkgYdQBpSUMEQFtvfX10cnhnYw==/?ll=61.373703%2C55.152021&utm_medium=mapframe&utm_source=maps&z=15.03"
-              style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Энгельса, 44Д — Яндекс
-              Карты</a><iframe
-              src="https://yandex.ru/map-widget/v1/?ll=61.373703%2C55.152021&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjA0NjU2NhJD0KDQvtGB0YHQuNGPLCDQp9C10LvRj9Cx0LjQvdGB0LosINGD0LvQuNGG0LAg0K3QvdCz0LXQu9GM0YHQsCwgNDTQlCIKDSqEdUIVIZ1cQg%2C%2C&z=15.03"
-              width="100%" height="700" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-          </div>
+        <div class="map__container"></div>
+        <div style="position:relative;overflow:hidden;"><a
+            href="https://yandex.ru/maps/56/chelyabinsk/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Челябинск</a><a
+            href="https://yandex.ru/maps/56/chelyabinsk/house/ulitsa_engelsa_44d/YkgYdQBpSUMEQFtvfX10cnhnYw==/?ll=61.373703%2C55.152021&utm_medium=mapframe&utm_source=maps&z=15.03"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Энгельса, 44Д — Яндекс
+            Карты</a><iframe
+            src="https://yandex.ru/map-widget/v1/?ll=61.373703%2C55.152021&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjA0NjU2NhJD0KDQvtGB0YHQuNGPLCDQp9C10LvRj9Cx0LjQvdGB0LosINGD0LvQuNGG0LAg0K3QvdCz0LXQu9GM0YHQsCwgNDTQlCIKDSqEdUIVIZ1cQg%2C%2C&z=15.03"
+            width="100%" height="700" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -223,16 +224,21 @@
         <div class="footer__contacts">
           <h3 class="footer__title">Контактные данные</h3>
 
-          <a href="tel:88005051323" class="footer__link footer__info-block">
-            <img src="./icons/Phone.svg" alt="Номер телефона Прицепные Решения" class="footer__icon">
-            <p class="footer__info"> 8 800 505-13-23</p>
-          </a>
+          <div class="footer__info-block">
+            <a href="tel:88005051323">
+              <img src="./icons/Phone.svg" alt="Номер телефона Прицепные Решения" class="footer__icon">
+            </a>
+            <a href="tel:88005051323" class="footer__link"> 8 800 505-13-23</a>
+          </div>
 
 
-          <a href="" class="footer__link footer__info-block">
-            <img src="./icons/Map Marker.svg" alt="Адрес компании Прицепные Решения" class="footer__icon">
-            <p class="footer__info"> г. Челябинск, ул. Автодорожная, <br> д. 17, офис 205</p>
-          </a>
+          <div class="footer__info-block">
+            <a href="https://yandex.ru/maps/-/CDfDyEnq" target="_blank">
+              <img src="./icons/Map Marker.svg" alt="Адрес компании Прицепные Решения" class="footer__icon">
+            </a>
+            <a href="https://yandex.ru/maps/-/CDfDyEnq" class="footer__link" target="_blank"> г. Челябинск,
+              ул. Автодорожная, <br> д. 17, офис 205</a>
+          </div>
 
 
           <div href="" class="footer__info-block footer__info-block_none-cursor">
@@ -241,10 +247,12 @@
           </div>
 
 
-          <a href="mailto:pricepresh74@mail.ru" class="footer__link footer__info-block">
-            <img src="./icons/Send Email.svg" alt="Почта Прицепные Решения" class="footer__icon">
-            <p class="footer__info"> pricepresh74@mail.ru</p>
-          </a>
+          <div class="footer__info-block">
+            <a href="mailto:pricepresh74@mail.ru">
+              <img src="./icons/Send Email.svg" alt="Почта Прицепные Решения" class="footer__icon">
+            </a>
+            <a href="mailto:pricepresh74@mail.ru" class="footer__link">pricepresh74@mail.ru</a>
+          </div>
 
           <div class="footer__social">
             <a href="#" class="footer__social-link"><img src="./icons/Whatsapp.svg" alt="WhatsApp Прицепные Решения"
@@ -254,12 +262,12 @@
           </div>
         </div>
         <div class="footer__center">
-          <a href="#"><img src="./icons/footer-logo-pricepnie-risheniya.svg" alt="Логотип Прицепные Решения"
+          <a href="./index.html"><img src="./icons/footer-logo-pricepnie-risheniya.svg" alt="Логотип Прицепные Решения"
               class="footer__logo"></a>
           <form class="footer__subscribe-form">
-            <label for="email" class="footer__label">Подпишитесь на нашу рассылку</label>
+            <label for="footer-email" class="footer__label">Подпишитесь на нашу рассылку</label>
             <div class="footer__input-group">
-              <input type="email" id="email" class="footer__input" placeholder="Напишите ваш e-mail">
+              <input type="footer-email" id="footer-email" class="footer__input" placeholder="Напишите ваш e-mail">
               <button class="footer__button">Подписаться</button>
             </div>
           </form>
@@ -273,6 +281,8 @@
             <ul class="footer__list">
               <li class="footer__list-item"><a href="#" class="footer__link">Низкорамные</a></li>
               <li class="footer__list-item"><a href="#" class="footer__link">Высокорамные</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Бортовые</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Шасси <br> под монтаж</a></li>
             </ul>
           </div>
           <div class="footer__column">

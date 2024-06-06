@@ -322,6 +322,7 @@ body {
 .pdf {
   border: 1px solid #D4252C;
   color: #D4252C;
+  font-size: 16px;
 }
 
 .learn {
@@ -556,6 +557,7 @@ body {
   position: absolute;
   cursor: pointer;
   max-height: 100%;
+  color: #D4252C;
 }
 
 .news__date {
@@ -567,6 +569,10 @@ body {
 
 .news__text {
   line-height: 150%;
+}
+
+.news__text p {
+  font-size: 21px;
 }
 
 .news__btn-all {

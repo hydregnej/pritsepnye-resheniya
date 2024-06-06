@@ -51,6 +51,7 @@
   align-items: center;
   position: relative;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .animated-logo__text {

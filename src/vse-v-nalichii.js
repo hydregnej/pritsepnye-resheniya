@@ -6,4 +6,4 @@ import "./styles/footer.css";
 import "./components/header.js";
 
 import "./styles/vse-v-nalichii.css";
-import "./components/index-nalichie";
+import "./components/index-nalichie.js";
