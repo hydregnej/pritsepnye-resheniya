@@ -1,45 +1,23 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "Montserrat Regular", sans-serif;
-}
-
-body {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding-top: 18px;
-}
-
-.container {
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-
 .availability .container {
   display: flex;
   flex-direction: column;
-  margin-top: 133px;
+  /* margin-top: 133px; */
 }
 
 .availability__container {
   margin: 0 auto;
-  width: 93%;
+  width: 100%;
+  /* width: 93%; */
   height: auto;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .availability__item {
+  /* max-width: 500px; */
+  display: flex;
+  flex-direction: column;
   width: 30%;
   height: auto;
   background-color: #F0F0F0;
@@ -52,6 +30,12 @@ body {
 
 .availability__item:hover {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.availability__item-block {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .availability__title-container {
@@ -84,13 +68,10 @@ body {
   left: 59%;
 }
 
-.availability__img {
-  height: fit-content;
-}
-
 .trailer-img {
   width: 100%;
-  height: 100%;
+  max-height: 240px;
+  /* object-fit: cover; */
 }
 
 .availability__title-container {
@@ -101,15 +82,17 @@ body {
   font-size: 22px;
   font-weight: bold;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: 23px;
-  margin-bottom: 40px;
+  margin: 23px 0 40px 7px;
+  max-width: 360px;
+  line-height: 150%;
+  flex-grow: 1;
 }
 
 .availability__property-block {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  flex-grow: 1;
 }
 
 .property-list__transported-weight,
@@ -132,7 +115,7 @@ body {
   width: 1000%;
   position: absolute;
   left: -21px;
-  bottom: 0;
+  bottom: -2px;
 }
 
 .availability__item-cost {
@@ -149,19 +132,19 @@ body {
   margin-top: 50px;
 }
 
-.availability__item-btn {
+/* .availability__item-btn {
   width: 140px;
   height: 40px;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 
-.pdf {
+/* .pdf {
   border: 1px solid #D4252C;
   color: #D4252C;
-}
+} */
 
-.learn {
+/* .learn {
   border: none;
   background-color: #D4252C;
   text-transform: uppercase;
@@ -172,9 +155,9 @@ body {
 .learn:hover {
   background-color: #000000;
   color: #ffffff;
-}
+} */
 
-.btn__learn-more {
+/* .btn__learn-more {
   width: 361px;
   height: 107px;
   border-radius: 10px;
@@ -185,22 +168,117 @@ body {
   margin: 0 auto;
   text-transform: uppercase;
   cursor: pointer;
-}
+} */
 
-.btn__learn-more {
+/* .btn__learn-more {
   margin-top: 50px;
-}
+} */
 
-.btn__learn-more:hover,
+/* .btn__learn-more:hover,
 .pdf:hover {
   background-color: #D4252C;
   color: #ffffff;
-}
+} */
 
-.pdf:active,
+/* .pdf:active,
 .btn__learn-more:active,
 .learn:active {
   border: none;
   background-color: #C6C6C6;
   color: rgba(33, 33, 33, 0.69);
+} */
+
+.btn__learn-more:active {
+  border: none;
+  background-color: #C6C6C6;
+  color: rgba(33, 33, 33, 0.69);
+}
+
+@media (max-width: 1500px) {
+  .property-list__text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .availability__title {
+    font-size: 36px;
+    margin-bottom: 70px;
+  }
+
+  .trailer-img {
+    max-height: 220px;
+  }
+
+  .availability__item-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  /* .property-list__transported-weight,
+  .property-list__value {
+    font-size: 12px;
+  } */
+  .property-list__text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .availability__item-title {
+    margin-bottom: 0px;
+    font-size: 13px;
+    max-width: 210px;
+  }
+
+  .property-list__text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 880px) {
+  .property-list__text {
+    margin-right: 7px;
+    margin-left: 7px;
+    font-size: 7px;
+  }
+
+  .availability__item-btns {
+    margin-right: 7px;
+    margin-left: 7px;
+  }
+
+  .availability__item-title {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 780px) {
+  .availability__title {
+    font-size: 25px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 590px) {
+  .availability {
+    margin-top: 25px;
+  }
+
+  .availability__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .availability__item-title {
+    font-size: 7px;
+  }
+
+  .availability__item-btns {
+    margin-bottom: 14px;
+  }
+
+  .availability__item {
+    width: 45%;
+  }
 }

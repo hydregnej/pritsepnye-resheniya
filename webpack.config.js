@@ -7,7 +7,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/index.js',
+    catalog: './src/catalog.js',
     vseVNalichii: './src/vse-v-nalichii.js',
+    product: './src/product.js',
     about: './src/about.js',
     // ourProduction: '.src/our-production',
   },
@@ -30,9 +32,21 @@ module.exports = {
       title: 'Прицепные Решения'
     }),
     new HtmlWebpackPlugin({
+      filename: 'catalog.html',
+      template: './src/pages/catalog.html',
+      chunks: ['catalog'],
+      title: 'Каталог'
+    }),
+    new HtmlWebpackPlugin({
       filename: 'vse-v-nalichii.html',
       template: './src/pages/vse-v-nalichii.html',
       chunks: ['vseVNalichii'],
+      title: 'В наличии'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'product.html',
+      template: './src/pages/product.html',
+      chunks: ['product'],
       title: 'В наличии'
     }),
     new HtmlWebpackPlugin({

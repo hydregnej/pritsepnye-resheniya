@@ -4,6 +4,7 @@ const upLongLine = document.querySelector('.animated-logo__up-long-line');
 const downLongLine = document.querySelector('.animated-logo__down-long-line');
 const downShortLine = document.querySelector('.animated-logo__down-short-line');
 const logoText = document.querySelector('.animated-logo__text');
+const burger = document.querySelector('.burger')
 
 function animateText() {
   logoText.classList.add('active');
@@ -24,3 +25,8 @@ gsap.timeline()
     duration: 0.5,
     ease: "power2.out"
   });
+
+  // Бургер-меню
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active")
+  })

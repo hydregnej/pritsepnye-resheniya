@@ -125,7 +125,6 @@ q:after {
   content: none;
 }
 
-/* Don't kill focus outline for keyboard users: http://24ways.org/2009/dont-lose-your-focus */
 a:hover,
 a:active {
   outline: none;
@@ -134,4 +133,117 @@ a:active {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Montserrat Regular", sans-serif;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card-btn {
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pdf {
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #D4252C;
+  color: #D4252C;
+  font-size: 16px;
+}
+
+.pdf:hover {
+  background-color: #D4252C;
+  color: #ffffff;
+}
+
+.pdf:active,
+.learn:active {
+  border: none;
+  background-color: #C6C6C6;
+  color: rgba(33, 33, 33, 0.69);
+}
+
+.learn {
+  border: none;
+  background-color: #D4252C;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.learn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media (max-width: 1300px) {
+  .card-btn {
+    font-size: 14px;
+    width: 110px;
+  }
+
+  .learn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-btn {
+    width: 86px;
+    height: 23px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 880px) {
+  .card-btn {
+    width: 68px;
+    height: 18px;
+    font-size: 7px;
+  }
+
+  .availability__item-btns {
+    margin-top: 25px;
+  }
+
+  .availability__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 425px) {
+  .card-btn {
+    font-size: 5px;
+    width: 58px;
+    height: 13px;
+  }
+
+  .learn {
+    font-size: 5px;
+  }
 }
