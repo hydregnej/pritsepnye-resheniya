@@ -79,7 +79,7 @@
 
 .catalog__card-img {
   width: 100%;
-  max-height: 240px;
+  object-fit: cover;
 }
 
 .catalog__card-buttons {
@@ -147,10 +147,9 @@
     font-size: 12px;
   }
 
-  .catalog__card-img {
+  /* .catalog__card-img {
     max-height: 220px;
-
-  }
+  } */
 
   /* .catalog__card-btn {
     font-size: 14px;
