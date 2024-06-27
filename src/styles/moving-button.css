@@ -26,11 +26,11 @@
   color: #fff;
   text-transform: uppercase;
   transition: transform 0.3s ease;
-}
-
-.moving-btn__social {
   right: -90px;
 }
+
+
+
 .moving-btn__social:hover {
   transform: translateX(-180px);
 }
@@ -38,4 +38,30 @@
 .moving-btn__social-link {
   color: #fff;
   text-decoration: none;
+}
+
+@media (max-width: 880px) {
+  .moving-btn__social {
+    font-size: 21px;
+    width: 240px;
+    height: 50px;
+    right: -75px;
+  }
+
+  .moving-btn__social-logo {
+    width: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .moving-btn__social {
+    font-size: 19px;
+    width: 250px;
+    height: 45px;
+    right: -77px;
+  }
+
+  .moving-btn__social-logo {
+    width: 33px;
+  }
 }

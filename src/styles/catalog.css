@@ -192,7 +192,6 @@
 
   .catalog__card-buttons {
     margin: 0 7px 25px 7px;
-    ;
   }
 
   .catalog__card-title {
@@ -200,6 +199,7 @@
   }
 
 }
+
 @media (max-width: 780px) {
   .catalog__title {
     font-size: 25px;
@@ -210,7 +210,6 @@
   .catalog__card-buttons {
     margin: 33px 8px 20px 8px;
   }
-
 }
 
 @media (max-width: 590px) {

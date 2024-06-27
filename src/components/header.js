@@ -4,7 +4,6 @@ const upLongLine = document.querySelector('.animated-logo__up-long-line');
 const downLongLine = document.querySelector('.animated-logo__down-long-line');
 const downShortLine = document.querySelector('.animated-logo__down-short-line');
 const logoText = document.querySelector('.animated-logo__text');
-const burger = document.querySelector('.burger')
 
 function animateText() {
   logoText.classList.add('active');
@@ -26,7 +25,23 @@ gsap.timeline()
     ease: "power2.out"
   });
 
-  // Бургер-меню
-  burger.addEventListener("click", () => {
-    burger.classList.toggle("active")
-  })
+// Бургер-меню
+const burger = document.querySelector('.burger')
+const headerModal = document.querySelector('.header-modal')
+const modalNavCatalog = document.querySelector('.modal-nav-catalog')
+const modalNavAboutUs = document.querySelector('.modal-nav-about-us')
+const modalMenuCatalog = document.querySelector('.modal-menu__catalog')
+const modalMenuAboutUs = document.querySelector('.modal-menu__about-us')
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active-burger")
+  headerModal.classList.toggle("header-modal-active")
+})
+
+modalNavCatalog.addEventListener("click", () => {
+  modalMenuCatalog.classList.toggle("modal-menu-catalog__active")
+})
+
+modalNavAboutUs.addEventListener("click", () => {
+  modalMenuAboutUs.classList.toggle("modal-menu-about-us__active")
+})

@@ -52,19 +52,19 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.burger.active .burger__line:nth-child(1) {
+.burger.active-burger .burger__line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
-.burger.active .burger__line:nth-child(2) {
+.burger.active-burger .burger__line:nth-child(2) {
   opacity: 0;
 }
 
-.burger.active .burger__line:nth-child(3) {
+.burger.active-burger .burger__line:nth-child(3) {
   transform: rotate(-42deg) translate(1.5px, -2.5px);
 }
 
-.active {
+.active-burger {
   transform: translateY(0);
 }
 
@@ -207,32 +207,96 @@
   display: flex;
 }
 
-.header__modal {
+.header-modal {
   display: none;
   position: absolute;
-  top: 63px;
+  top: 50px;
   left: 0;
   background-color: #fff;
   width: 100%;
   height: 100%;
   z-index: 1000;
+  padding: 20px 20px 0 20px;
 }
 
-.header__modal__menu-links {}
+.modal-nav * {
+  color: #000;
+  text-decoration: none;
+}
 
-.header__modal__item {}
+.modal-nav__menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
-.header__modal__item--dropdown-catalog {}
+.modal-nav__item {}
 
-.header__modal__link {}
+.modal-nav__item--dropdown-catalog {}
 
-.header-menu-modal__unwrap {}
+.modal-nav__list {
+  display: flex;
+  justify-content: space-between;
+}
 
-.header-menu-modal__lists {}
+.modal-nav__link {}
 
-.header-menu-modal__item {}
+.modal-nav__list-img {
+  width: 15px;
+}
 
-.header-menu-modal__link {}
+.modal-menu {
+  display: none;
+  padding: 10px 10px 0 10px;
+}
+
+.modal-menu-catalog {}
+
+.modal-menu-about-us {}
+
+.modal-menu__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.modal-menu__item {}
+
+.modal-menu__link {
+  color: #d4252c;
+}
+
+.modal-nav__item--dropdown-about {}
+
+.info-modal {}
+
+.social-modal {
+  padding-top: 10px;
+}
+
+.social-modal__link {}
+
+.social-modal__telegram {
+  width: 30px;
+  height: 30px;
+}
+
+.social-modal__whatsapp {
+  width: 26px;
+  height: 26px;
+}
+
+.header-modal-active {
+  display: block;
+}
+
+.modal-menu-catalog__active {
+  display: block;
+}
+
+.modal-menu-about-us__active {
+  display: block;
+}
 
 @media (max-width: 1750px) {
   .header {
@@ -561,8 +625,9 @@
   .info-header__email {
     display: block;
   }
-  .header__modal {
-    display: block;
+
+  .eader-modal {
+    display: none;
   }
 }
 
@@ -602,4 +667,7 @@
     font-size: 9px;
   }
 
+  .burger.active-burger .burger__line:nth-child(1) {
+    transform: rotate(45deg) translate(2px, 2px)
+  }
 }
