@@ -45,3 +45,19 @@ modalNavCatalog.addEventListener("click", () => {
 modalNavAboutUs.addEventListener("click", () => {
   modalMenuAboutUs.classList.toggle("modal-menu-about-us__active")
 })
+
+//Переход на страницу с конкретным элементом
+document.addEventListener('DOMContentLoaded', () => {
+  const hash = window.location.hash.substring(1)
+  const tabElements = document.querySelectorAll('.catalog__options-list-item')
+
+  tabElements.forEach(element => {
+    if (element.getAttribute('data-tab') === hash) {
+      element.classList.remove('js-catalog__options-list-item--inactive')
+      element.classList.add('js-catalog__options-list-item--active')
+    } else {
+      element.classList.remove('js-catalog__options-list-item--active')
+      element.classList.add('js-catalog__options-list-item--inactive')
+    }
+  })
+})
