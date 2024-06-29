@@ -91,6 +91,14 @@
   color: #000;
 }
 
+.nav-header__link:hover {
+  color: #d4252c;
+}
+
+.nav-header__link:active {
+  color: #b72329;
+}
+
 .social-header {
   display: flex;
   gap: 29px;
@@ -109,6 +117,12 @@
   text-decoration: none;
   font-size: 24px;
   color: #d4252c;
+  /* padding-bottom: 3px; */
+}
+.info-header__call:hover,
+.info-header__email:hover {
+  text-decoration: underline;
+  /* border-bottom: 2px #d4252c solid; */
 }
 
 .animated-logo {
@@ -201,6 +215,14 @@
   color: rgba(0, 0, 0, 0.68);
 }
 
+.header-menu__link:hover {
+  color: #d4252c;
+}
+
+.header-menu__link:active {
+  color: #b72329;
+}
+
 .nav-header__item--dropdown-about:hover .header-menu__unwrap,
 .nav-header__item--dropdown-catalog:hover .header-menu__unwrap {
   display: flex;
@@ -238,7 +260,9 @@
   justify-content: space-between;
 }
 
-.modal-nav__link {}
+.modal-nav__link:active {
+  color: #b72329;
+}
 
 .modal-nav__list-img {
   width: 15px;
@@ -695,7 +719,7 @@
   .burger.active-burger .burger__line:nth-child(1) {
     transform: rotate(45deg) translate(2px, 2px)
   }
-  
+
   .modal-nav * {
     font-size: 9px;
   }
