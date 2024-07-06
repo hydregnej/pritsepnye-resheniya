@@ -45,7 +45,7 @@
     font-size: 21px;
     width: 240px;
     height: 50px;
-    right: -75px;
+    right: -82px;
   }
 
   .moving-btn__social-logo {
@@ -55,13 +55,14 @@
 
 @media (max-width: 600px) {
   .moving-btn__social {
+    padding-left: 7px;
     font-size: 19px;
-    width: 250px;
-    height: 45px;
-    right: -77px;
+    width: 220px;
+    height: 35px;
+    right: -82px;
   }
 
   .moving-btn__social-logo {
-    width: 33px;
+    width: 25px;
   }
 }

@@ -1,4 +1,11 @@
 /* Страница о нас */
+:root {
+  --main-title-size: 64px;
+  --main-title-margin-bot: 20px;
+
+
+  --main-text-size: 24px;
+}
 
 .section {
   padding: 20px;
@@ -6,8 +13,8 @@
 
 .section__title {
   text-align: center;
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: var(--main-title-size);
+  margin-bottom: var(--main-title-margin-bot);
 }
 
 .section__content {
@@ -31,14 +38,35 @@
   line-height: 150%;
   flex: 1 1 50%;
   padding: 10px;
+  font-size: var(--main-text-size);
 }
 
 .section__text p {
   margin: 0;
 }
 
-@media (max-width: 768px) {
-  .section__content {
-    flex-direction: column;
+@media (max-width: 1300px) {
+  :root {
+    --main-title-size: 36px;
+    --main-text-size: 20px;
+  }
+}
+
+@media (max-width: 780px) {
+  :root {
+    --main-title-size: 25px;
+    --main-text-size: 15px;
+    --main-title-margin-bot: 6px;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --main-title-size: 20px;
+    --main-text-size: 14px;
+  }
+
+  .section__image {
+    width: 100%;
   }
 }

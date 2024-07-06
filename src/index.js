@@ -17,6 +17,7 @@ import "./components/all-catalog.js";
 import "./components/index-nalichie.js";
 import "./components/swiper.js";
 import "./components/feedback.js";
+import "./components/map.js";
 
 // import "./styles/social-icons.css";
 

@@ -234,6 +234,10 @@
   .property-list__text {
     font-size: 12px;
   }
+
+  .availability__item-btns {
+    margin-top: 30px;
+  }
 }
 
 @media (max-width: 880px) {
