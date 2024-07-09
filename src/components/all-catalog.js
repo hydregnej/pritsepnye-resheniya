@@ -50,64 +50,64 @@ document.addEventListener('DOMContentLoaded', function () {
 // Массив с данными
 const lowCards = [
 {
-  imgSrc: "./image/semitrailer 9833-0000050.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer 9833-0000050.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9833-0000050",
 },
 {
-  imgSrc: "./image/semitrailer 9834-0000050.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer 9834-0000050.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9834-0000050",
 },
 {
-  imgSrc: "./image/semitrailer 9835-0000050.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer 9835-0000050.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ 9835-0000050",
 },
 {
-  imgSrc: "./image/semitrailer sliding 9833-0000050.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer sliding 9833-0000050.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9833-0000050 (раздвижной)",
 },
 {
-  imgSrc: "./image/semitrailer sliding 9834-0000050.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer sliding 9834-0000050.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9834-0000050 (раздвижной)",
 },
 ]
 
 const highCards = [
 {
-  imgSrc: "./image/semitrailer 9833-0000060.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer 9833-0000060.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9833-0000060",
 },
 {
-  imgSrc: "./image/semitrailer 9834-0000060.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer 9834-0000060.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9834-0000060",
 },
 {
-  imgSrc: "./image/semitrailer 9835-0000060.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer 9835-0000060.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ 9835-0000060",
 },
 {
-  imgSrc: "./image/semitrailer sliding 9833-0000060.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer sliding 9833-0000060.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9833-0000060 (раздвижной)",
 },
 {
-  imgSrc: "./image/semitrailer sliding 9834-0000060.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer sliding 9834-0000060.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9834-0000060 (раздвижной)",
 },
 ]
 
 const boardCards = [
 {
-  imgSrc: "./image/semitrailer 9833-0000070.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer 9833-0000070.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9833-0000070",
 },
 {
-  imgSrc: "./image/semitrailer 9834-0000070.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer 9834-0000070.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9834-0000070",
 },
 ]
 
 const chassisCards = [
 {
-  imgSrc: "./image/semitrailer 9833-0000020.png",
+  imgSrc: "./image/сжатые изображения/без фона/semitrailer 9833-0000020.png",
   title: "ПОЛУПРИЦЕП-ТЯЖЕЛОВОЗ ДТ 9833-0000020",
 },
 ]

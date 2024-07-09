@@ -24,27 +24,27 @@ const getNewsValues = (elems) => {
 
 const elems = [
   {
-    img: "./image/news-example-img.png",
+    img: "./image/сжатые изображения/news-example-img.png",
     date: "5 марта 2023",
     text: "Новая модель прицепа от компании XYZ: еще более надежная и функциональная!",
   },
   {
-    img: "./image/news-example-img1.png",
+    img: "./image/сжатые изображения/news-example-img1.png",
     date: "4 марта 2023",
     text: "Увеличение производственных мощностей компании XYZ: новые возможности для заказчиков!",
   },
   {
-    img: "./image/news-example-img.png",
+    img: "./image/сжатые изображения/news-example-img.png",
     date: "3 марта 2023",
     text: "Новая модель прицепа от компании XYZ: еще более надежная и функциональная!",
   },
   {
-    img: "./image/news-example-img1.png",
+    img: "./image/сжатые изображения/news-example-img1.png",
     date: "2 марта 2023",
     text: "Увеличение производственных мощностей компании XYZ: новые возможности для заказчиков!",
   },
   {
-    img: "./image/news-example-img.png",
+    img: "./image/сжатые изображения/news-example-img.png",
     date: "1 марта 2023",
     text: "Новая модель прицепа от компании XYZ: еще более надежная и функциональная!",
   },
