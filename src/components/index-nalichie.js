@@ -66,7 +66,7 @@ const getAvailabilityValues = (items) => {
 // Пример данных "в наличии"
 const items = [
   {
-    imgSrc: "./image/сжатые изображения/без фона/semitrailer 9833-0000060-05.png",
+    imgSrc: "./imageбез фона/semitrailer 9833-0000060-05.png",
     title: "Полуприцеп-тяжеловоз ДТ 9833-0000060-05",
     transportedWeight: "40 000 кг",
     selfWeight: "10 000 кг",
@@ -74,7 +74,7 @@ const items = [
     axleLoad: "33 000 кг",
   },
   {
-    imgSrc: "./image/сжатые изображения/без фона/semitrailer 9835-0000050-03.png",
+    imgSrc: "./imageбез фона/semitrailer 9835-0000050-03.png",
     title: "Полуприцеп-тяжеловоз 9835-0000050-03",
     transportedWeight: "60 000 кг",
     selfWeight: "15 000 кг",

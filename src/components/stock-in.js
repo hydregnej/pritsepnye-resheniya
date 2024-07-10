@@ -42,7 +42,7 @@ const getStockValues = (items) => {
 // Пример данных "в наличии"
 const items = [
 	{
-		imgSrc: "./image/сжатые изображения/без фона/image1.png",
+		imgSrc: "./image/без фона/image1.png",
 		title: "Прицеп 1",
 		transportedWeight: "72200 кг",
 		selfWeight: "16000 кг",
@@ -51,7 +51,7 @@ const items = [
 		cost: "999 000",
 	},
 	{
-		imgSrc: "./image/сжатые изображения/без фона/image2.png",
+		imgSrc: "./image/без фона/image2.png",
 		title: "Прицеп 2",
 		transportedWeight: "70000 кг",
 		selfWeight: "15500 кг",
@@ -60,7 +60,7 @@ const items = [
 		cost: "999 000",
 	},
 	{
-		imgSrc: "./image/сжатые изображения/без фона/image3.png",
+		imgSrc: "./image/без фона/image3.png",
 		title: "Прицеп 3",
 		transportedWeight: "60000 кг",
 		selfWeight: "14300 кг",

@@ -10,9 +10,10 @@
   color: black;
 }
 
-.main__breadcrumbs a:last-child {
+.main__breadcrumbs > *:last-child {
   color: #D4252C;
 }
+
 
 @media (max-width: 1300px) {
   .main__breadcrumbs {

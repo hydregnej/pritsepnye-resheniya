@@ -10,4 +10,6 @@ import "./styles/catalog.css";
 import "./components/header.js";
 import "./components/all-catalog.js";
 
+// import "./components/products-catalog.json";
+
 // import "./styles/social-icons.css";

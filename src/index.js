@@ -18,6 +18,10 @@ import "./components/index-nalichie.js";
 import "./components/swiper.js";
 import "./components/feedback.js";
 import "./components/map.js";
+import "./components/catalog-data";
+
+// import "./components/products-catalog.json";
+
 
 // import "./styles/social-icons.css";
 
