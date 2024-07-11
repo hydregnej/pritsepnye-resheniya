@@ -1,30 +1,51 @@
 import catalogData from './catalog-data';
 
 document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const category = urlParams.get('category');
-    const productId = urlParams.get('id');
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get('category');
+  const productId = urlParams.get('id');
 
-    if (category && productId) {
-        const { title, imgSrc, additionalImages } = catalogData[category][productId];
+  if (category && productId) {
 
-        const productDetailsContainer = document.getElementById('product-details');
+    const headTitle = document.querySelector('title')
 
-        // Создание HTML для слайдов основной галереи
-        const mainSlidesHTML = additionalImages.map(src => `
+    // const metaDescription = document.querySelector('meta[name="description"]')
+
+
+    const { title, additionalImages, descriptionTitle, descriptionMain ,descriptionOptional, maximumLoadWeight, workingPlatformLength, suspension, ramps } = catalogData[category][productId];
+
+    headTitle.innerText = `${title}`
+
+    //Это для метатегов, потом разобраться с ними
+    // metaDescription.setAttribute()
+
+    const productDetailsContainer = document.getElementById('product-details');
+
+    // Создание HTML для слайдов основной галереи
+    const mainSlidesHTML = additionalImages.map(src => `
             <div class="swiper-slide swiper-slide-top">
-                <img src="${src}" alt="Product Image" class="swiper-slide-top-img">
+                <img src="${src}" alt="Полуприцеп Прицепные Решения: ${title}" class="swiper-slide-top-img">
             </div>
         `).join('');
 
-        // Создание HTML для миниатюр
-        const thumbsSlidesHTML = additionalImages.map(src => `
+    // Создание HTML для миниатюр
+    const thumbsSlidesHTML = additionalImages.map(src => `
             <div class="swiper-slide">
-                <img src="${src}" alt="Thumbnail" class="swiper-slide-bot-img">
+                <img src="${src}" alt="Полуприце Прицепные Решения: ${title}" class="swiper-slide-bot-img">
             </div>
         `).join('');
 
-        productDetailsContainer.innerHTML = `
+        const mainDescriptionHTML = descriptionMain.map(text => `
+          <p class="product-info__text-main-block">${text}</p>
+      `).join('');
+
+      const optionalDescriptionHTML = descriptionOptional.map(text => `
+        <p class="product-info__text-main-block">${text}</p>
+    `).join('');
+
+    const contentElement = document.createElement('div');
+
+    contentElement.innerHTML = `
       <div class="main-container">
 
         <div class="main__breadcrumbs">
@@ -60,33 +81,78 @@ document.addEventListener('DOMContentLoaded', () => {
               </div>
             </div>
 
+
+            <div class="product-info">
+
+              <div class="product-info__all-titles">
+                <h2 class="product-info__title product-info__title_active">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h2>
+                <h2 class="product-info__title">ОПИСАНИЕ</h2>
+              </div>
+      
+              <div class="product-info__description product-info__description-active">
+                <div class="product-info__description-block">
+                  <p class="product-info__text">Максимальный вес груза</p>
+                  <p class="product-info__text-description">${maximumLoadWeight}</p>
+                </div>
+      
+                <div class="product-info__description-block">
+                  <p class="product-info__text">Длина рабочей платформы</p>
+                  <p class="product-info__text-description">${workingPlatformLength}</p>
+                </div>
+      
+                <div class="product-info__description-block">
+                  <p class="product-info__text">Подвеска</p>
+                  <p class="product-info__text-description">${suspension}</p>
+                </div>
+      
+                <div class="product-info__description-block">
+                  <p class="product-info__text">Трапы</p>
+                  <p class="product-info__text-description">${ramps}</p>
+                </div>
+      
+              </div>
+
+              <div class="product-info__description product-info__description-dop">
+                <h3 class="product-info__description-title product-info__text-align-left">${descriptionTitle}</h3>
+                <h4 class="product-info__text product-info__text-align-left"><strong>Основные характеристики:<strong></h4>
+                <div class="product-info__text product-info__text-align-left product-info__main-block">${mainDescriptionHTML}</div>
+
+                <h4 class="product-info__text product-info__text-align-left"><strong>Дополнительные особенности:<strong></h4>
+                <div class="product-info__text product-info__text-align-left"> ${optionalDescriptionHTML}</div>
+
+              </div>
+
+            </div>           
+
           </div>
         </section>
       </div>
         `;
 
-        // Инициализация Swiper.js после обновления DOM
-        const galleryThumbs = new Swiper('.gallery-thumbs', {
-            spaceBetween: 10,
-            slidesPerView: 5,
-            freeMode: true,
-            watchSlidesVisibility: true,
-            watchSlidesProgress: true,
-        });
 
-        const galleryTop = new Swiper('.gallery-top', {
-            spaceBetween: 10,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            thumbs: {
-                swiper: galleryThumbs,
-            },
-        });
+        productDetailsContainer.prepend(contentElement)
+    // Инициализация Swiper.js после обновления DOM
+    const galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 5,
+      freeMode: true,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
 
-    } else {
-        const productDetailsContainer = document.getElementById('product-details');
-        productDetailsContainer.innerHTML = '<p>Продукт не найден</p>';
-    }
+    const galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+
+  } else {
+    const productDetailsContainer = document.getElementById('product-details');
+    productDetailsContainer.innerHTML = '<p>Продукт не найден</p>';
+  }
 });

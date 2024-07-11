@@ -1,7 +1,7 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -11,7 +11,6 @@ module.exports = {
     vseVNalichii: './src/vse-v-nalichii.js',
     product: './src/product.js',
     about: './src/about.js',
-    // ourProduction: '.src/our-production',
   },
   output: {
     filename: '[name].js',
@@ -22,53 +21,56 @@ module.exports = {
     compress: true,
     open: true,
   },
-  mode: 'development',
+  mode: 'development', // Используйте 'production' для финального билда
   plugins: [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/pages/index.html',
       chunks: ['index'],
-      title: 'Прицепные Решения'
+      title: 'Прицепные Решения',
+      inject: 'body',
     }),
     new HtmlWebpackPlugin({
       filename: 'catalog.html',
       template: './src/pages/catalog.html',
       chunks: ['catalog'],
-      title: 'Каталог'
+      title: 'Каталог',
+      inject: 'body',
     }),
     new HtmlWebpackPlugin({
       filename: 'vse-v-nalichii.html',
       template: './src/pages/vse-v-nalichii.html',
       chunks: ['vseVNalichii'],
-      title: 'В наличии'
+      title: 'В наличии',
+      inject: 'body',
     }),
     new HtmlWebpackPlugin({
       filename: 'product.html',
       template: './src/pages/product.html',
       chunks: ['product'],
-      title: 'В наличии'
+      title: 'Продукт',
+      inject: 'body',
     }),
     new HtmlWebpackPlugin({
       filename: 'about.html',
       template: './src/pages/about.html',
       chunks: ['about'],
-      title: 'О нас'
+      title: 'О нас',
+      inject: 'body',
     }),
-    // new HtmlWebpackPlugin({
-    //   filename: 'our-production.html',
-    //   template: './src/pages/our-production.html',
-    //   chunks: ['our-production'],
-    //   title: 'Наше производство'
-    // }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
         use: [
-          process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
-        // "style-loader", //для development-режима
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader' // Добавьте postcss-loader
+        ],
       },
     ],
   },

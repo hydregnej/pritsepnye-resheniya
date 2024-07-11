@@ -9,3 +9,4 @@ import "./styles/product.css";
 import "./components/header.js";
 import "./components/product-render.js";
 import "./components/product-slider.js";
+import "./components/product-render-description.js";

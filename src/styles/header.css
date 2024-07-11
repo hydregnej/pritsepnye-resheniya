@@ -193,10 +193,12 @@
 
 .header-menu__unwrap {
   display: none;
+  opacity: 0; /* Начальная прозрачность */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Переход для плавного появления/исчезания */
+  transform: translateY(-10px); /* Начальное смещение для появления */
   position: absolute;
   left: -122px;
   top: 63px;
-  height: 86px;
   z-index: 1000;
 }
 
@@ -205,8 +207,8 @@
   align-items: center;
   justify-content: space-around;
   width: 800px;
+  height: 86px;
   background-color: #f9f9f9;
-
 }
 
 .header-menu__link {
@@ -223,9 +225,14 @@
   color: #b72329;
 }
 
-.nav-header__item--dropdown-about:hover .header-menu__unwrap,
+/* .nav-header__item--dropdown-about:hover .header-menu__unwrap,
 .nav-header__item--dropdown-catalog:hover .header-menu__unwrap {
   display: flex;
+} */
+.header-menu__unwrap.show {
+  display: block; /* Отображается, когда добавлен класс show */
+  opacity: 1; /* Полная непрозрачность */
+  transform: translateY(0); /* Нормальное положение */
 }
 
 .header-modal {

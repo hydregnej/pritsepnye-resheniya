@@ -7,9 +7,9 @@ const heroSwiper = new Swiper('.hero-swiper', {
     el: '.hero-swiper-pagination',
     clickable: true,
   },
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  //   waitForTransition: true,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    waitForTransition: true,
+  },
 });

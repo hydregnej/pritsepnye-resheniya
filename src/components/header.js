@@ -61,3 +61,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdownItems = document.querySelectorAll('.nav-header__item--dropdown-catalog, .nav-header__item--dropdown-about');
+
+  dropdownItems.forEach(item => {
+    const menu = item.querySelector('.header-menu__unwrap');
+
+    item.addEventListener('mouseenter', () => {
+      // Используйте requestAnimationFrame для принудительного перерисования
+      requestAnimationFrame(() => {
+        menu.style.display = 'block';
+        requestAnimationFrame(() => {
+          menu.classList.add('show');
+        });
+      });
+    });
+
+    item.addEventListener('mouseleave', () => {
+      menu.classList.remove('show');
+      menu.addEventListener('transitionend', function handler() {
+        if (!menu.classList.contains('show')) {
+          menu.style.display = 'none';
+        }
+        menu.removeEventListener('transitionend', handler);
+      });
+    });
+  });
+});
