@@ -244,142 +244,6 @@
 
 /* Третий фрейм */
 
-/* Андрей четвёртый фрейм начало */
-.feedback {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  margin: 200px 0;
-  /* margin-top: 200px;
-  margin-bottom: 200px; */
-}
-
-.feedback__h2 {
-  position: relative;
-  font-size: 64px;
-  font-weight: 700;
-  color: #28392c;
-}
-
-.feedback__h2::after {
-  content: '';
-  position: absolute;
-  top: 72px;
-  right: 0;
-  width: 0px;
-  height: 3px;
-  background: #D4252C;
-  transition: width 1s ease, right 1s ease;
-}
-
-.animate-form::after {
-  width: 530px;
-  right: 778px;
-}
-
-.feedback__form {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.feedback__input-block {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-}
-
-.feedback__wrapper {
-  display: flex;
-  gap: 50px;
-}
-
-.feedback__block-left {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.feedback__block-right {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.feedback__label {
-  padding-left: 15px;
-  font-weight: 500;
-  font-size: 32px;
-}
-
-.feedback__label-required::after {
-  content: "*";
-  color: #D4252C;
-  margin-left: 2px;
-}
-
-.feedback__input {
-  font-size: 28px;
-  font-weight: 400;
-  border-radius: 4px;
-  width: 675px;
-  height: 84px;
-  padding: 15px;
-  border: none;
-  outline: none;
-  background: #F0F0F0;
-}
-
-.feedback__input-message {
-  height: 250px;
-  resize: none;
-  overflow-y: auto;
-}
-
-.feedback__validate-text {
-  font-size: 20px;
-  align-self: flex-start;
-  color: #D4252C;
-}
-
-.feedback__btn {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #D4252C;
-  border-radius: 6px;
-  width: 414px;
-  height: 118px;
-  background: rgb(240, 240, 240);
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 36px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #D4252C;
-  user-select: none;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.feedback__btn:hover {
-  background: #D4252C;
-  color: #fff;
-}
-
-.feedback__btn:active {
-  background: #D4252C;
-  color: rgba(33, 33, 33, 0.69);
-  border-color: black;
-  background: rgb(240, 240, 240);
-}
-
-/* Андрей четвёртый фрейм конец */
-
 /* Пятый фрейм */
 .news__btn-all-link {
   text-decoration: none;
@@ -429,73 +293,12 @@
   }
 }
 
-@media (max-width: 1520px) {
-  .feedback__input {
-    width: 575px;
-  }
-
-}
-
-@media (max-width: 1345px) {
-  .animate-form::after {
-    display: none;
-  }
-
-}
-
 @media (max-width: 1300px) {
   .btn__learn-more {
     width: 193px;
     height: 57px;
     font-size: 21px;
     border-radius: 4px;
-  }
-
-  .feedback {
-    margin: 90px 0;
-  }
-
-  .animate-form::after {
-    display: block;
-    width: 297px;
-    right: 439px;
-  }
-
-  .feedback__wrapper {
-    gap: 20px;
-  }
-
-  .feedback__h2 {
-    font-size: 36px;
-  }
-
-  .feedback__h2::after {
-    height: 2px;
-    top: 48px;
-  }
-
-  .feedback__label {
-    font-size: 18px;
-  }
-
-  .feedback__input {
-    width: 360px;
-    height: 44px;
-    font-size: 18px;
-  }
-
-  .feedback__input-message {
-    height: 156px;
-  }
-
-  .feedback__validate-text {
-    font-size: 10px;
-  }
-
-  .feedback__btn {
-    font-size: 19px;
-    width: 221px;
-    height: 63px;
   }
 
   .news__btn-all {
@@ -514,53 +317,6 @@
     font-size: 19px;
     border-radius: 3px;
   }
-
-  .feedback {
-    margin: 75px 0;
-  }
-
-  .feedback__h2 {
-    font-size: 25px;
-  }
-
-  .feedback__h2::after {
-    height: 2px;
-  }
-
-  .animate-form::after {
-    width: 207px;
-    right: 305px;
-    top: 34px;
-  }
-
-  .feedback__form {
-    margin-top: 24px;
-  }
-
-  .feedback__label {
-    font-size: 14px;
-  }
-
-  .feedback__input {
-    width: 271px;
-    height: 33px;
-    font-size: 12px;
-  }
-
-  .feedback__input-message {
-    height: 130px;
-  }
-
-  .feedback__validate-text {
-    font-size: 9px;
-  }
-
-  .feedback__btn {
-    font-size: 14px;
-    width: 172px;
-    height: 55px;
-  }
-
 }
 
 @media (max-width: 768px) {
@@ -612,83 +368,10 @@
     display: none;
   }
 
-  /* ****************************************** */
   .btn__learn-more {
     width: 118px;
     height: 27px;
     font-size: 10px;
-  }
-
-  .feedback {
-    margin: 35px 0;
-  }
-
-  .feedback__h2 {
-    font-size: 20px;
-  }
-
-  .animate-form::after {
-    width: 165px;
-    right: 244px;
-    top: 28px;
-  }
-
-  .feedback__label {
-    font-size: 10px;
-  }
-
-  .feedback__input {
-    width: 153px;
-    height: 34px;
-    font-size: 8px;
-  }
-
-  .feedback__input-message {
-    height: 130px;
-  }
-
-  .feedback__validate-text {
-    font-size: 7px;
-  }
-
-  .feedback__btn {
-    font-size: 10px;
-    width: 118px;
-    height: 37px;
-  }
-
-}
-
-@media (max-width: 450px) {
-  .feedback {
-    gap: 5px;
-  }
-
-  .feedback__block-left,
-  .feedback__block-right {
-    gap: 15px;
-  }
-
-  .feedback__wrapper {
-    flex-direction: column;
-  }
-
-  .feedback__h2 {
-    text-align: center;
-  }
-
-  .animate-form::after {
-    display: none;
-  }
-
-  .feedback__form {
-    margin-top: 20px;
-    width: 100%;
-    align-items: stretch;
-  }
-
-  .feedback__input {
-    width: 100%;
   }
 }
 

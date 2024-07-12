@@ -7,6 +7,7 @@ import "./styles/index.css";
 import "./styles/catalog.css";
 import "./styles/vse-v-nalichii.css";
 import "./styles/slider-news.css";
+import "./styles/main-feedback-form.css";
 
 import "./components/header.js";
 import "./components/slider-main.js";

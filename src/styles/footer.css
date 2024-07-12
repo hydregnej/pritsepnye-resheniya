@@ -1,5 +1,6 @@
 :root {
-  --footer-margin-top: 150px;
+  /* --footer-margin-top: 150px; */
+  --footer-margin-top: 50px;
 }
 
 .footer {

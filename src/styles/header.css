@@ -715,12 +715,15 @@
   }
 
   .static-logo__img {
-    width: 90px;
+    width: 150px;
   }
-
+/* 
   .info-header__call,
   .info-header__email {
     font-size: 9px;
+  } */
+  .info-header__email {
+    display: none;
   }
 
   .burger.active-burger .burger__line:nth-child(1) {

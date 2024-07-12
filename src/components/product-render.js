@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // const metaDescription = document.querySelector('meta[name="description"]')
 
 
-    const { title, additionalImages, descriptionTitle, descriptionMain ,descriptionOptional, maximumLoadWeight, workingPlatformLength, suspension, ramps } = catalogData[category][productId];
+    const { title, additionalImages, descriptionTitle, descriptionMain, descriptionOptional, maximumLoadWeight, workingPlatformLength, suspension, ramps } = catalogData[category][productId];
 
     headTitle.innerText = `${title}`
 
@@ -35,14 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `).join('');
 
-        const mainDescriptionHTML = descriptionMain.map(text => `
+    const mainDescriptionHTML = descriptionMain.map(text => `
           <p class="product-info__text-main-block">${text}</p>
       `).join('');
 
-      const optionalDescriptionHTML = descriptionOptional.map(text => `
+    const optionalDescriptionHTML = descriptionOptional.map(text => `
         <p class="product-info__text-main-block">${text}</p>
     `).join('');
 
+    let match = title.match(/ДТ \d+-\d+/);
+    let nameSemiTrailer = match ? match[0] : '';
+
+    //
     const contentElement = document.createElement('div');
 
     contentElement.innerHTML = `
@@ -85,39 +89,39 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="product-info">
 
               <div class="product-info__all-titles">
-                <h2 class="product-info__title product-info__title_active">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</h2>
-                <h2 class="product-info__title">ОПИСАНИЕ</h2>
+                <p class="product-info__title product-info__title_active">ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ</p>
+                <p class="product-info__title">ОПИСАНИЕ</p>
               </div>
       
-              <div class="product-info__description product-info__description-active">
+              <div class="product-info__description product-info__description-specifications product-info__description-active">
                 <div class="product-info__description-block">
-                  <p class="product-info__text">Максимальный вес груза</p>
+                  <p class="product-info__text product-info__text-main">Максимальный вес груза</p>
                   <p class="product-info__text-description">${maximumLoadWeight}</p>
                 </div>
       
                 <div class="product-info__description-block">
-                  <p class="product-info__text">Длина рабочей платформы</p>
+                  <p class="product-info__text product-info__text-main">Длина рабочей платформы</p>
                   <p class="product-info__text-description">${workingPlatformLength}</p>
                 </div>
       
                 <div class="product-info__description-block">
-                  <p class="product-info__text">Подвеска</p>
+                  <p class="product-info__text product-info__text-main">Подвеска</p>
                   <p class="product-info__text-description">${suspension}</p>
                 </div>
       
                 <div class="product-info__description-block">
-                  <p class="product-info__text">Трапы</p>
+                  <p class="product-info__text product-info__text-main">Трапы</p>
                   <p class="product-info__text-description">${ramps}</p>
                 </div>
       
               </div>
 
               <div class="product-info__description product-info__description-dop">
-                <h3 class="product-info__description-title product-info__text-align-left">${descriptionTitle}</h3>
-                <h4 class="product-info__text product-info__text-align-left"><strong>Основные характеристики:<strong></h4>
+                <h2 class="product-info__description-title product-info__text-align-left">${descriptionTitle}</h2>
+                <h3 class="product-info__text product-info__text-align-left"><strong>Основные характеристики Полуприцепа ${nameSemiTrailer}:<strong></h3>
                 <div class="product-info__text product-info__text-align-left product-info__main-block">${mainDescriptionHTML}</div>
 
-                <h4 class="product-info__text product-info__text-align-left"><strong>Дополнительные особенности:<strong></h4>
+                <h3 class="product-info__text product-info__text-align-left"><strong>Дополнительные особенности Полуприцепа ${nameSemiTrailer}:<strong></h3>
                 <div class="product-info__text product-info__text-align-left"> ${optionalDescriptionHTML}</div>
 
               </div>
@@ -130,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
 
-        productDetailsContainer.prepend(contentElement)
+    productDetailsContainer.prepend(contentElement)
     // Инициализация Swiper.js после обновления DOM
     const galleryThumbs = new Swiper('.gallery-thumbs', {
       spaceBetween: 10,

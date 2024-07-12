@@ -159,7 +159,46 @@
     </header>
 
     <main class="main" id="product-details">
-       <form action="">СЮДА ФОРМУ ОБРАТНОЙ СВЯЗИ!</form> 
+      <section class="container feedback">
+        <h2 class="feedback__h2">Оставьте заявку для оформления заказа</h2>
+
+        <form class="feedback__form">
+
+          <div class="feedback__wrapper">
+            <div class="feedback__block-left">
+              <div class="feedback__input-block">
+                <label for="name" class="feedback__label feedback__label-required">Ваше имя</label>
+                <input type="text" id="name" name="name" class="feedback__input" placeholder="Введите ФИО" required>
+              </div>
+              <div class="feedback__input-block">
+                <label for="phone" class="feedback__label feedback__label-required">Номер телефона</label>
+                <input type="tel" id="phone" name="phone" class="feedback__input" placeholder="+7(___)___-__-__"
+                  required>
+              </div>
+              <div class="feedback__input-block">
+                <label for="email" class="feedback__label feedback__label-required">Почта</label>
+                <input type="email" id="email" name="email" class="feedback__input" placeholder="Введите вашу почту"
+                  required>
+                <p class="feedback__validate-text">* обязательные поля</p>
+
+              </div>
+            </div>
+            <div class="feedback__block-right">
+              <div class="feedback__input-block">
+                <label for="subject" class="feedback__label">Тема</label>
+                <input type="text" id="subject" name="subject" class="feedback__input" placeholder="Низкорамный Полупрпицеп ДТ 9833-0000050">
+              </div>
+              <div class="feedback__input-block">
+                <label for="message" class="feedback__label">Ваше сообщение</label>
+                <textarea id="message" name="message" class="feedback__input feedback__input-message"
+                  placeholder="Хочу оформить доставку на Низкорамный Полуприцеп" rows="4" required></textarea>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="feedback__btn">Отправить</button>
+        </form>
+      </section>
     </main>
 
     <footer class="footer">
