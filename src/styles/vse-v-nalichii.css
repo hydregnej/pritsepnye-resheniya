@@ -199,12 +199,16 @@
   .property-list__text {
     font-size: 18px;
   }
+
+  .availability__item-title {
+    margin: 20px;
+  }
 }
 
 @media (max-width: 1300px) {
   .availability__title {
     font-size: 36px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
 
   .trailer-img {
@@ -228,12 +232,16 @@
 @media (max-width: 1024px) {
   .availability__item-title {
     margin-bottom: 0px;
-    font-size: 13px;
+    font-size: 15px;
     max-width: 210px;
   }
 
   .property-list__text {
-    font-size: 12px;
+    font-size: 13px;
+  }
+
+  .property-list__text {
+    margin-left: 10px;
   }
 
   .availability__item-btns {
@@ -245,7 +253,7 @@
   .property-list__text {
     margin-right: 7px;
     margin-left: 7px;
-    font-size: 7px;
+    font-size: 11px;
   }
 
   .availability__item-btns {
@@ -254,36 +262,81 @@
   }
 
   .availability__item-title {
-    font-size: 8px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 780px) {
   .availability__title {
     font-size: 25px;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
-}
 
-@media (max-width: 590px) {
   .availability {
     margin-top: 25px;
   }
 
-  .availability__title {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
   .availability__item-title {
-    font-size: 7px;
-  }
-
-  .availability__item-btns {
-    margin-bottom: 14px;
+    max-width: 100%;
   }
 
   .availability__item {
     width: 45%;
+  }
+
+  .property-list__text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 570px) {
+
+  .availability__item-title {
+    margin: 11px;
+    font-size: 11px;
+  }
+
+  .property-list__text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  .availability__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .availability__item {
+    width: 70%;
+  }
+
+  .availability__item-title {
+    font-size: 12px;
+  }
+
+  .property-list__text {
+    font-size: 12px;
+  }
+
+  .availability__item-btns,
+  .property-list__text {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media (max-width: 385px) {
+  .availability__item-title {
+    font-size: 11px;
+  }
+
+  .property-list__text {
+    font-size: 11px;
+  }
+
+  .availability__item-btns,
+  .property-list__text {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }

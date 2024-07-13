@@ -217,17 +217,17 @@ body {
 
 @media (max-width: 1024px) {
   .card-btn {
-    width: 86px;
-    height: 23px;
-    font-size: 9px;
+    font-size: 11px;
+    height: 30px;
+    width: 90px;
   }
 }
 
 @media (max-width: 880px) {
   .card-btn {
-    width: 68px;
-    height: 18px;
-    font-size: 7px;
+    font-size: 9px;
+    height: 22px;
+    width: 80px;
   }
 
   .availability__item-btns {
@@ -239,13 +239,21 @@ body {
   }
 }
 
+@media (max-width: 880px) {
+  .card-btn {
+    font-size: 10px;
+    height: 25px;
+    width: 81px;
+  }
+}
+
 @media (max-width: 500px) {
   .container {
     padding: 0 10px;
   }
 }
 
-@media (max-width: 425px) {
+/* @media (max-width: 425px) {
   .card-btn {
     font-size: 5px;
     width: 58px;
@@ -255,4 +263,4 @@ body {
   .learn {
     font-size: 5px;
   }
-}
+} */

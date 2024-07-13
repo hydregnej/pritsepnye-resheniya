@@ -3,16 +3,20 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Прицепные Решения</title>
+  <!-- не забудь вставить иконку на вкладку -->
+  <!-- <link rel="shortcut icon" href="./icons/logo-black.png" type="image/x-icon"> -->
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-  <title>Наличие полуприцепов</title>
-</head>
+<link href="contacts.css" rel="stylesheet"></head>
 
 <body>
-
   <div class="moving-btn">
     <div class="moving-btn__social whatsapp"><img src="./icons/icon-sticky-whatsapp.svg" class="moving-btn__social-logo"
         alt="whatsapp">
@@ -55,16 +59,16 @@
               <div class="header-menu__unwrap">
                 <ul class="header-menu__lists">
                   <li class="header-menu__item">
-                    <a href="#" class="header-menu__link">Низкорамные</a>
+                    <a href="./catalog.html#low" class="header-menu__link">Низкорамные</a>
                   </li>
                   <li class="header-menu__item">
-                    <a href="#" class="header-menu__link">Высокорамные</a>
+                    <a href="./catalog.html#high" class="header-menu__link">Высокорамные</a>
                   </li>
                   <li class="header-menu__item">
-                    <a href="#" class="header-menu__link">Бортовые</a>
+                    <a href="./catalog.html#board" class="header-menu__link">Бортовые</a>
                   </li>
                   <li class="header-menu__item">
-                    <a href="#" class="header-menu__link">Шасси под Монтаж</a>
+                    <a href="./catalog.html#chassis" class="header-menu__link">Шасси под Монтаж</a>
                   </li>
                 </ul>
               </div>
@@ -110,16 +114,16 @@
               <div class="modal-menu modal-menu__catalog">
                 <ul class="modal-menu__lists">
                   <li class="modal-menu__item">
-                    <a href="#" class="modal-menu__link">Низкорамные</a>
+                    <a href="./catalog.html#low" class="modal-menu__link">Низкорамные</a>
                   </li>
                   <li class="modal-menu__item">
-                    <a href="#" class="modal-menu__link">Высокорамные</a>
+                    <a href="./catalog.html#high" class="modal-menu__link">Высокорамные</a>
                   </li>
                   <li class="modal-menu__item">
-                    <a href="#" class="modal-menu__link">Бортовые</a>
+                    <a href="./catalog.html#board" class="modal-menu__link">Бортовые</a>
                   </li>
                   <li class="modal-menu__item">
-                    <a href="#" class="modal-menu__link">Шасси под Монтаж</a>
+                    <a href="./catalog.html#chassis" class="modal-menu__link">Шасси под Монтаж</a>
                   </li>
                 </ul>
               </div>
@@ -154,37 +158,22 @@
     </header>
 
     <main class="main">
-      <div class="main-container">
-        <div class="main__breadcrumbs">
-          <a href="./index.html">Главная </a>
-          <span> / </span>
-          <a href="./catalog.html">Каталог</a>
+
+
+
+      <section class="map">
+        <div class="map__container"></div>
+        <div style="position:relative;overflow:hidden;"><a
+            href="https://yandex.ru/maps/56/chelyabinsk/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Челябинск</a><a
+            href="https://yandex.ru/maps/56/chelyabinsk/house/ulitsa_engelsa_44d/YkgYdQBpSUMEQFtvfX10cnhnYw==/?ll=61.373703%2C55.152021&utm_medium=mapframe&utm_source=maps&z=15.03"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Энгельса, 44Д — Яндекс
+            Карты</a><iframe
+            src="https://yandex.ru/map-widget/v1/?ll=61.373703%2C55.152021&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjA0NjU2NhJD0KDQvtGB0YHQuNGPLCDQp9C10LvRj9Cx0LjQvdGB0LosINGD0LvQuNGG0LAg0K3QvdCz0LXQu9GM0YHQsCwgNDTQlCIKDSqEdUIVIZ1cQg%2C%2C&z=15.03"
+            width="100%" height="700" frameborder="1" allowfullscreen="true" style="pointer-events:none;"></iframe>
         </div>
-        <section class="catalog">
-          <div class="container">
-            <div class="catalog__title-container">
-              <h1 class="catalog__title">Каталог полуприцепов</h1>
-            </div>
-            <div class="catalog__options">
-              <ul class="catalog__options-list">
-                <li class="catalog__options-list-item js-catalog__options-list-item--active" data-tab="low">
-                  Низкорамные
-                </li>
-                <li class="catalog__options-list-item js-catalog__options-list-item--inactive" data-tab="high">
-                  Высокорамные
-                </li>
-                <li class="catalog__options-list-item js-catalog__options-list-item--inactive" data-tab="board">
-                  Бортовые</li>
-                <li class="catalog__options-list-item js-catalog__options-list-item--inactive" data-tab="chassis">
-                  Шасси под
-                  монтаж</li>
-              </ul>
-            </div>
-            <div class="catalog__container">
-            </div>
-          </div>
-        </section>
-      </div>
+      </section>
+
     </main>
 
     <footer class="footer">
@@ -283,6 +272,6 @@
       </div>
     </footer>
   </div>
-</body>
+<script defer src="contacts.js"></script></body>
 
 </html>

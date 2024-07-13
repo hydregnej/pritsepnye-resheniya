@@ -11,6 +11,7 @@ module.exports = {
     vseVNalichii: './src/vse-v-nalichii.js',
     product: './src/product.js',
     about: './src/about.js',
+    contacts: './src/contacts.js',
   },
   output: {
     filename: '[name].js',
@@ -21,7 +22,7 @@ module.exports = {
     compress: true,
     open: true,
   },
-  mode: 'development', // Используйте 'production' для финального билда
+  mode: 'development', // Использовать 'production' для финального билда
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -59,6 +60,13 @@ module.exports = {
       template: './src/pages/about.html',
       chunks: ['about'],
       title: 'О нас',
+      inject: 'body',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'contacts.html',
+      template: './src/pages/contacts.html',
+      chunks: ['contacts'],
+      title: 'Контакты',
       inject: 'body',
     }),
   ],

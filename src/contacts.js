@@ -3,8 +3,6 @@ import "./styles/header.css";
 import "./styles/footer.css";
 import "./styles/fonts.css";
 import "./styles/moving-button.css";
-import "./styles/breadcrumbs.css";
-import "./styles/catalog.css";
 
 import "./components/header.js";
-import "./components/all-catalog.js";
+import "./components/map.js";
