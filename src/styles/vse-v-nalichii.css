@@ -1,13 +1,11 @@
 .availability .container {
   display: flex;
   flex-direction: column;
-  /* margin-top: 133px; */
 }
 
 .availability__container {
   margin: 0 auto;
   width: 100%;
-  /* width: 93%; */
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -15,7 +13,6 @@
 }
 
 .availability__item {
-  /* max-width: 500px; */
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -70,8 +67,6 @@
 
 .trailer-img {
   width: 100%;
-  max-height: 240px;
-  /* object-fit: cover; */
 }
 
 .availability__title-container {
@@ -79,13 +74,19 @@
 }
 
 .availability__item-title {
-  font-size: 22px;
+  /* font-size: 22px;
   font-weight: bold;
   text-transform: uppercase;
   margin: 23px 0 40px 7px;
   max-width: 360px;
   line-height: 150%;
+  flex-grow: 1; */
+
   flex-grow: 1;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 23px 110px 40px 21px;
+  text-transform: uppercase;
 }
 
 .availability__property-block {

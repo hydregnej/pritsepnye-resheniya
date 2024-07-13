@@ -3,6 +3,7 @@
 
   --availability-width: 204px;
   --availability-height: 71px;
+  --availability-font-size: 14px;
   --availability-margin: 20px 0;
 
   --swiper-slide-width: 1500px;
@@ -252,6 +253,9 @@
 
 @media (max-width: 1350px) {
   :root {
+    --availability-width: 190px;
+    --availability-height: 60px;
+
     --product-info-text-font-size: 18px;
     --swiper-slide-width: 1000px;
   }
@@ -264,6 +268,10 @@
 
 @media (max-width: 1300px) {
   :root {
+    --availability-width: 170px;
+    --availability-height: 53px;
+    --availability-margin: 15px 0;
+
     --title-font-size: 36px;
   }
 }
@@ -278,10 +286,18 @@
 
 @media (max-width: 950px) {
   :root {
+    --availability-width: 163px;
+    --availability-height: 50px;
+    --availability-margin: 13px 0;
+
     --title-font-size: 30px;
     --product-info-text-font-size: 14px;
     --swiper-slide-width: 600px;
     --swiper-button-next-after-font-size: 28px;
+  }
+
+  .availability {
+    font-size: var(--availability-font-size);
   }
 
   .product-info__description-specifications {
@@ -311,6 +327,11 @@
 
 @media (max-width: 780px) {
   :root {
+    --availability-width: 156px;
+    --availability-height: 46px;
+    --availability-margin: 10px 0;
+    --availability-font-size: 13px;
+
     --title-font-size: 25px;
     --product-info-text-font-size: 14px;
     --swiper-slide-width: 400px;
@@ -351,16 +372,27 @@
 
 @media (max-width: 550px) {
   :root {
+    --availability-width: 124px;
+    --availability-height: 36px;
+    --availability-margin: 7px 0;
+    --availability-font-size: 11px;
+
     --title-font-size: 20px;
     --product-info-title-text-size: 16px;
     /* --product-info-text-font-size: 14px; */
     /* --swiper-slide-width: 400px; */
     /* --product-info-text-align-description: left; */
   }
-  
+
 }
+
 @media (max-width: 500px) {
   :root {
+    --availability-width: 105px;
+    --availability-height: 34px;
+    --availability-margin: 7px 0;
+    --availability-font-size: 10px;
+
     --title-font-size: 18px;
     --product-info-title-text-size: 14px;
     --product-info-text-font-size: 12px;
@@ -369,7 +401,13 @@
     --swiper-slide-width: 300px;
   }
 }
+
 @media (max-width: 450px) {
+  :root {
+    --availability-width: 95px;
+    --availability-height: 31px;
+  }
+
   .product__title {
     max-width: 250px;
   }

@@ -123,12 +123,6 @@
   background-color: #000000;
   color: #ffffff;
 } */
- 
-.learn {
-  text-decoration: none;
-  text-align: center;
-  align-content: center;
-}
 
 @media (max-width: 1300px) {
   .catalog {
