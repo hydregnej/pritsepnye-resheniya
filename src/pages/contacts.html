@@ -6,7 +6,9 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Прицепные Решения</title>
+  <meta name="description"
+    content="Свяжитесь с компанией Прицепные Решение для заказа и консультации по полуприцепам-тяжеловозам. Контактная информация, реквизиты адрес, телефон и форма обратной связи.">
+  <title>Контакты - Прицепные Решение | Полуприцепы-тяжеловозы</title>
   <!-- не забудь вставить иконку на вкладку -->
   <!-- <link rel="shortcut icon" href="./icons/logo-black.png" type="image/x-icon"> -->
 
@@ -160,29 +162,101 @@
     <main class="main">
 
       <div class="container contacts">
+        <div class="main__breadcrumbs">
+          <a href="./index.html">Главная </a>
+          <span> / </span>
+          <a href="./contacts.html">Контакты</a>
+        </div>
 
-        <h1 class="contacts__main-title">КОНТАКТЫ ООО Прицепные решения «ДТ»</h1>
+        <h1 class="contacts__title">Контакты <br> ООО Прицепные решения «ДТ»</h1>
 
-        <h2 class="contacts__address">Адрес Прицепные решения «ДТ»</h2>
+        <section class="info">
+          <div class="info__block address">
+            <h2 class="main__title address__title">Наши контакты</h2>
+            <p class="main__text address__text">Свяжитесь с нами для получения дополнительной информации о наших
+              полуприцепах-тяжеловозах.</p>
+            <ul class="address__list">
+              <li class="main__text address__item"><strong>Адрес: </strong> <a href="https://yandex.ru/maps/-/CDSa7FYd"
+                  class="address__link" target="_blank">г. Челябинск, ул. Автодорожная, д. 17, офис 205</a></li>
+              <li class="main__text address__item"><strong>Телефон: </strong> <a href="tel:88005051323"
+                  class="address__link">8 800 505-13-23</a></li>
+              <li class="main__text address__item"><strong>Email: </strong> <a href="mailto:pricepresh74@mail.ru"
+                  class="address__link">pricepresh74@mail.ru</a></li>
+            </ul>
+          </div>
 
-        <h3 class="contacts__location">454008, г. Челябинск, ул. Автодорожная, д. 17, офис 205</h3>
-
-        
-
-
-        <section class="map">
-          <div class="map__container"></div>
-          <div style="position:relative;overflow:hidden;"><a
-              href="https://yandex.ru/maps/56/chelyabinsk/?utm_medium=mapframe&utm_source=maps"
-              style="color:#eee;font-size:12px;position:absolute;top:0px;">Челябинск</a><a
-              href="https://yandex.ru/maps/56/chelyabinsk/house/ulitsa_engelsa_44d/YkgYdQBpSUMEQFtvfX10cnhnYw==/?ll=61.373703%2C55.152021&utm_medium=mapframe&utm_source=maps&z=15.03"
-              style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Энгельса, 44Д — Яндекс
-              Карты</a><iframe
-              src="https://yandex.ru/map-widget/v1/?ll=61.373703%2C55.152021&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjA0NjU2NhJD0KDQvtGB0YHQuNGPLCDQp9C10LvRj9Cx0LjQvdGB0LosINGD0LvQuNGG0LAg0K3QvdCz0LXQu9GM0YHQsCwgNDTQlCIKDSqEdUIVIZ1cQg%2C%2C&z=15.03"
-              width="100%" height="700" frameborder="1" allowfullscreen="true" style="pointer-events:none;"></iframe>
+          <div class="info__block requisites">
+            <h2 class="main__title requisites__title">Наши реквизиты</h2>
+            <p class="main__text requisites__text">Необходимые реквизиты Вы можете уточнить у нашего менеджера</p>
+            <ul class="requisites__list">
+              <li class="main__text requisites__item"><strong>ОГРН:</strong> 1217400032530</li>
+              <li class="main__text requisites__item"><strong>ИНН:</strong> 7448236139</li>
+              <li class="main__text requisites__item"><strong>КПП:</strong> 744801001</li>
+            </ul>
           </div>
         </section>
+
+        <section class="container feedback">
+          <h2 class="feedback__h2">Форма обратной связи</h2>
+
+          <form class="feedback__form">
+
+            <div class="feedback__wrapper">
+              <div class="feedback__block-left">
+                <div class="feedback__input-block">
+                  <label for="name" class="feedback__label feedback__label-required">Ваше имя</label>
+                  <input type="text" id="name" name="name" class="feedback__input" placeholder="Введите ФИО" required>
+                </div>
+                <div class="feedback__input-block">
+                  <label for="phone" class="feedback__label feedback__label-required">Номер телефона</label>
+                  <input type="tel" id="phone" name="phone" class="feedback__input" placeholder="+7(___)___-__-__"
+                    required>
+                </div>
+                <div class="feedback__input-block">
+                  <label for="email" class="feedback__label feedback__label-required">Почта</label>
+                  <input type="email" id="email" name="email" class="feedback__input" placeholder="Введите вашу почту"
+                    required>
+                  <p class="feedback__validate-text">* обязательные поля</p>
+
+                </div>
+              </div>
+              <div class="feedback__block-right">
+                <div class="feedback__input-block">
+                  <label for="subject" class="feedback__label">Тема</label>
+                  <input type="text" id="subject" name="subject" class="feedback__input"
+                    placeholder="Низкорамный Полупрпицеп ДТ 9833-0000050">
+                </div>
+                <div class="feedback__input-block">
+                  <label for="message" class="feedback__label">Ваше сообщение</label>
+                  <textarea id="message" name="message" class="feedback__input feedback__input-message"
+                    placeholder="Хочу оформить доставку на Низкорамный Полуприцеп" rows="4" required></textarea>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="feedback__btn">Отправить</button>
+          </form>
+        </section>
+
       </div>
+
+      <section class="how-find">
+        <h2 class="main__title how-find__title">Как нас найти</h2>
+        <div id="how-find__map">
+          <div class="how-find__map"></div>
+          <div style="position:relative;overflow:hidden;">
+            <a href="https://yandex.ru/maps/56/chelyabinsk/?utm_medium=mapframe&utm_source=maps"
+              style="color:#eee;font-size:12px;position:absolute;top:0px;">Челябинск</a>
+            <a href="https://yandex.ru/maps/org/pritsepnyye_resheniya/36746567552/?ll=61.355737%2C55.201805&z=13.93"
+              style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Автодорожная, 17, офис 205 — Яндекс
+              Карты</a>
+            <iframe
+              src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab44a7707b16ae16b800035183db04fb9d674602f6478edfa9efefcf17e1d59eb&amp;source=constructor"
+              width="100%" height="600" frameborder="0"></iframe>
+          </div>
+        </div>
+      </section>
+
 
     </main>
 
@@ -200,10 +274,10 @@
                 <a href="tel:88005051323" class="footer__link"> 8 800 505-13-23</a>
               </div>
               <div class="footer__info-block">
-                <a href="https://yandex.ru/maps/-/CDfDyEnq" target="_blank">
+                <a href="https://yandex.ru/maps/-/CDSa7FYd" target="_blank">
                   <img src="./icons/Map Marker.svg" alt="Адрес компании Прицепные Решения" class="footer__icon">
                 </a>
-                <a href="https://yandex.ru/maps/-/CDfDyEnq" class="footer__link" target="_blank"> г. Челябинск,
+                <a href="https://yandex.ru/maps/-/CDSa7FYd" class="footer__link" target="_blank"> г. Челябинск,
                   ул. Автодорожная, <br> д. 17, офис 205</a>
               </div>
               <div href="" class="footer__info-block footer__info-block_none-cursor">

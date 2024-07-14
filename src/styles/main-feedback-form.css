@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin: 120px 0;
+  margin: 80px 0;
   /* margin-top: 200px;
   margin-bottom: 200px; */
 }
@@ -68,7 +68,7 @@
 .feedback__label {
   padding-left: 15px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .feedback__label-required::after {
@@ -78,25 +78,25 @@
 }
 
 .feedback__input {
-  width: 470px;
-  height: 44px;
-  font-size: 15px;
-  font-weight: 400;
-  border-radius: 4px;
-  padding: 15px;
+  background: #f0f0f0;
   border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 400;
+  height: 50px;
   outline: none;
-  background: #F0F0F0;
+  padding: 15px;
+  width: 480px;
 }
 
 .feedback__input-message {
-  height: 156px;
+  height: 169px;
   resize: none;
   overflow-y: auto;
 }
 
 .feedback__validate-text {
-  font-size: 13px;
+  font-size: 14px;
   align-self: flex-start;
   color: #D4252C;
 }
