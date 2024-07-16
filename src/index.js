@@ -16,4 +16,5 @@ import "./components/all-catalog.js";
 import "./components/index-nalichie.js";
 import "./components/feedback.js";
 import "./components/map.js";
-import "./components/catalog-data";
+import "./components/catalog-data.js";
+import "./components/stock-in.js";

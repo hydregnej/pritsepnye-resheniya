@@ -3,7 +3,6 @@
   position: relative;
   width: 100%;
   height: 100%;
-  margin-top: 20px;
 }
 
 .hero-slider__title {
@@ -64,7 +63,7 @@
 
 /* Второй фрейм */
 .catalog {
-  margin-bottom: 140px;
+  margin-bottom: 60px;
 }
 
 .catalog__card:nth-child(n+4) {
@@ -76,17 +75,10 @@
   align-self: center;
 }
 
-/* 
-.catalog__card-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin: 33px 21px 44px 21px;
-} */
-
 /* Второй фрейм */
 
 /* Третий фрейм */
-.in-stock .container {
+/* .in-stock .container {
   display: flex;
   flex-direction: column;
   margin-top: 133px;
@@ -141,10 +133,10 @@
   transition: width 1s ease, left 1s ease;
 }
 
-/* .in-stock__title.animate::after {
-  width: 41%;
-  left: 59%;
-} */
+.in-stock-animate:after {
+  left: 672px;
+  width: 451px;
+}
 
 .in-stock__img {
   height: fit-content;
@@ -167,7 +159,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-}
+} */
 
 .property-list__transported-weight,
 .property-list__self-weight,
@@ -192,7 +184,7 @@
   bottom: 0;
 }
 
-.in-stock__item-cost {
+/* .in-stock__item-cost {
   margin-top: 30px;
   margin-left: 21px;
   font-size: 16px;
@@ -211,15 +203,15 @@
   height: 40px;
   border-radius: 5px;
   cursor: pointer;
-}
+} */
 
 .btn__learn-more {
-  width: 361px;
-  height: 107px;
+  width: 221px;
+  height: 63px;
   border-radius: 10px;
   border: 1px solid #D4252C;
   color: #D4252C;
-  font-size: 40px;
+  font-size: 19px;
   background-color: #ffffff;
   margin: 0 auto;
   text-transform: uppercase;
@@ -245,6 +237,10 @@
 /* Третий фрейм */
 
 /* Пятый фрейм */
+.news {
+  display: none;
+}
+
 .news__btn-all-link {
   text-decoration: none;
   color: inherit;
@@ -293,14 +289,27 @@
   }
 }
 
-@media (max-width: 1300px) {
-  .btn__learn-more {
-    width: 193px;
-    height: 57px;
-    font-size: 21px;
-    border-radius: 4px;
+@media (max-width: 1525px) {
+  .swiper-pagination-bullet {
+    height: 25px;
+    width: 25px;
   }
 
+  .swiper-pagination-bullet-active {
+    height: 32px;
+    width: 32px;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    gap: 12px;
+    bottom: 22px;
+  }
+}
+
+@media (max-width: 1300px) {
   .news__btn-all {
     width: 193px;
     height: 57px;
@@ -308,14 +317,31 @@
     border-radius: 4px;
     margin: 60px 0;
   }
+
+  .swiper-pagination-bullet {
+    height: 22px;
+    width: 22px;
+  }
+
+  .swiper-pagination-bullet-active {
+    height: 30px;
+    width: 30px;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 15px;
+    gap: 10px;
+  }
 }
 
 @media (max-width: 780px) {
   .btn__learn-more {
-    width: 178px;
-    height: 53px;
-    font-size: 19px;
-    border-radius: 3px;
+    font-size: 14px;
+    height: 55px;
+    width: 172px;
   }
 }
 
@@ -344,7 +370,7 @@
 
 @media (max-width: 590px) {
   #hero-slider__pignation-bullet {
-    gap: 5px;
+    gap: 3px;
   }
 
   .swiper-pagination-bullet {
@@ -361,7 +387,7 @@
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
-    bottom: 15px;
+    bottom: 10px;
   }
 
   .catalog__card:nth-child(n+3) {
@@ -369,9 +395,32 @@
   }
 
   .btn__learn-more {
-    width: 118px;
-    height: 27px;
-    font-size: 10px;
+    font-size: 12px;
+    height: 47px;
+    width: 142px;
+  }
+}
+
+@media (max-width: 440px) {
+  #hero-slider__pignation-bullet {
+    gap: 2px;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    bottom: 8px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 17px;
+    height: 17px;
   }
 }
 
@@ -381,19 +430,19 @@
   }
 
   .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
   }
 
   .swiper-pagination-bullet-active {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 15px;
   }
 
   .swiper-horizontal>.swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
   .swiper-pagination-fraction {
-    bottom: 10px;
+    bottom: 6px;
   }
 }

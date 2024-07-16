@@ -1,18 +1,18 @@
 //Анимация полоски под заголовком
 document.addEventListener("DOMContentLoaded", function () {
-  const target = document.querySelector(".feedback__h2");
+  const targetFeedback = document.querySelector(".feedback__h2");
 
-  if (!target) {
-    console.error("Target element not found!");
+  if (!targetFeedback) {
+    console.error("TargetFeedback element not found!");
     return;
   }
 
-  const observer = new IntersectionObserver((entries, observer) => {
+  const observerFeedback = new IntersectionObserver((entries, observerFeedback) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         console.log("Element is intersecting");
         entry.target.classList.add('animate-form');
-        observer.unobserve(entry.target);
+        observerFeedback.unobserve(entry.target);
       } else {
         console.log("Element is not intersecting");
       }
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     threshold: 0.1
   });
 
-  observer.observe(target);
+  observerFeedback.observe(targetFeedback);
 });
 
 //Отправка данных из формы на сервер

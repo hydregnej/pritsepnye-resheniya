@@ -1,97 +1,25 @@
-const getStockValues = (items) => {
-	const stockInContainer = document.querySelector(".in-stock__container");
+//Анимация полоски под заголовком
+document.addEventListener("DOMContentLoaded", function () {
+  const targetInStock = document.querySelector(".availability__title");
 
-	items.forEach((item) => {
-		const stockInElem = document.createElement("div");
-		stockInElem.classList.add("in-stock__item");
+  if (!targetInStock) {
+    console.error("TargetInStock element not found!");
+    return;
+  }
 
-		stockInElem.innerHTML = `
-            <div class="in-stock__img">
-               <img class="trailer-img" src="${item.imgSrc}" alt="trailer photo">
-            </div>
-            <div class="in-stock__item-title">
-               <span>${item.title}</span>
-            </div>
-				<div class="in-stock__property-block">
-				<ul class="property-list__name">
-				<li class="property-list__transported-weight">Вес перевозимого груза <span class="property-list__red-line"></li>
-				<li class="property-list__self-weight">Собственный вес <span class="property-list__red-line"></li>
-				<li class="property-list__platform-dimensions">Габариты платформы <span class="property-list__red-line"></li>
-				<li class="property-list__axle-load">Нагрузка на ось <span class="property-list__red-line"></li>
-				</ul>
+  const observerInStock = new IntersectionObserver((entries, observerInStock) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log("Element is intersecting");
+        entry.target.classList.add('availability-animate');
+        observerInStock.unobserve(entry.target);
+      } else {
+        console.log("Element is not intersecting");
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
 
-				<ul class="property-list__value">
-				<li class="property-list__transported-weight">${item.transportedWeight}</li>
-				<li class="property-list__self-weight">${item.selfWeight}</li>
-				<li class="property-list__platform-dimensions">${item.platformDimensions}</li>
-				<li class="property-list__axle-load">${item.axleLoad}</li>
-				</ul>
-				</div>
-				<div class="in-stock__item-cost">
-				<span>Стоимость: ${item.cost} $</span>
-				</div>
-				<div class="in-stock__item-btns">
-				<button class="in-stock__item-btn pdf">Скачать PDF</button>
-				<button class="in-stock__item-btn learn">перейти</button>
-				</div>
-      `;
-		stockInContainer.appendChild(stockInElem);
-	});
-};
-
-// Пример данных "в наличии"
-const items = [
-	{
-		imgSrc: "./image/без фона/image1.png",
-		title: "Прицеп 1",
-		transportedWeight: "72200 кг",
-		selfWeight: "16000 кг",
-		platformDimensions: "10900 мм",
-		axleLoad: "11000 кг",
-		cost: "999 000",
-	},
-	{
-		imgSrc: "./image/без фона/image2.png",
-		title: "Прицеп 2",
-		transportedWeight: "70000 кг",
-		selfWeight: "15500 кг",
-		platformDimensions: "10300 мм",
-		axleLoad: "10500 кг",
-		cost: "999 000",
-	},
-	{
-		imgSrc: "./image/без фона/image3.png",
-		title: "Прицеп 3",
-		transportedWeight: "60000 кг",
-		selfWeight: "14300 кг",
-		platformDimensions: "10800 мм",
-		axleLoad: "10500 кг",
-		cost: "999 000",
-	},
-];
-
-
-getStockValues(items);
-
-
-document.addEventListener("DOMContentLoaded", function() {
-	const target = document.getElementById('animate-title');
-
-	if (!target) {
-		console.error("Target element not found!");
-		return;
-	}
-
-	const observer = new IntersectionObserver((entries, observer) => {
-		entries.forEach(entry => {
-			if (entry.isIntersecting) {
-				entry.target.classList.add('animate');
-				observer.unobserve(entry.target); 
-			}
-		});
-	}, {
-		threshold: 0.1 
-	});
-
-	observer.observe(target);
+  observerInStock.observe(targetInStock);
 });
