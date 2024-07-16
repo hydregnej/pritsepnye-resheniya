@@ -7,31 +7,17 @@
   --availability-margin: 20px 0;
 
   --swiper-slide-width: 1500px;
+  --swiper-button-next-after-font-size: 34px;
 
   --product-info-margin-top: 50px;
-
-  /* Пока не использую */
   --product-info-title-text-size: 20px;
-  /* Пока не использую */
-
   --product-info-title-text-gap: 70px;
   --product-info-title-margin-bottom: 20px;
-
-  --product-info-description-margin-top: 30px;
-
   --product-info-text-padding: 0 40px 20px 40px;
   --product-info-text-font-size: 24px;
   --product-info-text-main-block-padding: 15px 10px;
   --product-info-text-align-description: center;
-
-  /* Пока не использую */
-  --product-info-description-title-font-size: 26px;
-  /* Пока не использую */
-
   --product-info-description-title-margin-bot: 20px;
-
-  --swiper-button-next-after-font-size: 34px;
-
 }
 
 .main {
@@ -84,7 +70,6 @@
   opacity: 0.8;
   transition: opacity 0.3s ease;
   user-select: none;
-
 }
 
 .gallery-top {
@@ -221,7 +206,6 @@
 
 .product-info__description-dop {
   flex-direction: column;
-  /* padding-top: 100px; */
 }
 
 @media (max-width: 1650px) {
@@ -350,9 +334,6 @@
   :root {
     --title-font-size: 22px;
     --product-info-title-text-size: 18px;
-    /* --product-info-text-font-size: 14px; */
-    /* --swiper-slide-width: 400px; */
-    /* --product-info-text-align-description: left; */
   }
 
   .swiper-button-next:after,
@@ -379,9 +360,6 @@
 
     --title-font-size: 20px;
     --product-info-title-text-size: 16px;
-    /* --product-info-text-font-size: 14px; */
-    /* --swiper-slide-width: 400px; */
-    /* --product-info-text-align-description: left; */
   }
 
 }

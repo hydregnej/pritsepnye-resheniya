@@ -1,10 +1,10 @@
-import "./styles/reset.css";
-import "./styles/header.css";
-import "./styles/footer.css";
-import "./styles/fonts.css";
-import "./styles/moving-button.css";
-import "./styles/breadcrumbs.css";
-import "./styles/catalog.css";
+import "./components/Сброс-стилей/reset.css";
+import "./components/Шрфиты/fonts.css";
+import "./components/Плавающие-кнопки/moving-button.css";
+import "./components/Шапка/header.css";
+import "./components/Подвал/footer.css";
+import "./components/Хлебные-крошки/breadcrumbs.css";
+import "./components/Каталог/catalog.css";
 
-import "./components/header.js";
-import "./components/all-catalog.js";
+import "./components/Шапка/header.js";
+import "./components/Каталог/all-catalog.js";

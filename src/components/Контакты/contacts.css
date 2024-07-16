@@ -16,7 +16,6 @@
 
 .main__title {
   font-size: calc(var(--contacts-title-font-size) / 1.5);
-  /* margin-bottom: calc(var(--contacts-title-margin-bootom) / 3); */
 }
 
 .main__text {
@@ -130,6 +129,10 @@
 @media (max-width: 950px) {
   :root {
     --contacts-title-font-size: 30px;
+  }
+
+  .map-iframe {
+    height: 400px;
   }
 }
 

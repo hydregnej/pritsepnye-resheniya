@@ -1,4 +1,4 @@
-import catalogData from './catalog-data.js'; 
+import catalogData from '../Данные-продукта/data-product'; 
 
 document.addEventListener('DOMContentLoaded', function () {
   const getAvailabilityValues = (items) => {

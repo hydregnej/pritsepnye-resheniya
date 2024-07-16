@@ -1,5 +1,4 @@
 :root {
-  /* --footer-margin-top: 150px; */
   --footer-margin-top: 50px;
 }
 
@@ -56,16 +55,6 @@
   align-items: center;
   gap: 20px;
 }
-
-/* .footer__icon_tg {
-  width: 54px;
-  height: 54px;
-}
-
-.footer__icon_wa {
-  width: 54px;
-  height: 54px;
-} */
 
 .footer__center {
   display: flex;

@@ -78,89 +78,6 @@
 /* Второй фрейм */
 
 /* Третий фрейм */
-/* .in-stock .container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 133px;
-}
-
-.in-stock__container {
-  margin: 0 auto;
-  width: 93%;
-  height: auto;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-}
-
-.in-stock__item {
-  width: 30%;
-  height: auto;
-  background-color: #F0F0F0;
-  border-radius: 15px;
-  position: relative;
-  padding: 3% 0;
-  transition: box-shadow 0.3s ease;
-  overflow: hidden;
-}
-
-.in-stock__item:hover {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-}
-
-.in-stock__title-container {
-  position: relative;
-  display: inline-block;
-}
-
-.in-stock__title {
-  position: relative;
-  display: inline-block;
-  font-size: 66px;
-  font-weight: bold;
-  margin: 0 auto;
-  margin-bottom: 102px;
-}
-
-.in-stock__title::after {
-  content: '';
-  position: absolute;
-  bottom: -23px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: #D4252C;
-  transition: width 1s ease, left 1s ease;
-}
-
-.in-stock-animate:after {
-  left: 672px;
-  width: 451px;
-}
-
-.in-stock__img {
-  height: fit-content;
-}
-
-.in-stock__title-container {
-  margin: 0 auto;
-}
-
-.in-stock__item-title {
-  font-size: 22px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 23px;
-  margin-bottom: 40px;
-}
-
-.in-stock__property-block {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-} */
-
 .property-list__transported-weight,
 .property-list__self-weight,
 .property-list__platform-dimensions,
@@ -183,27 +100,6 @@
   left: -21px;
   bottom: 0;
 }
-
-/* .in-stock__item-cost {
-  margin-top: 30px;
-  margin-left: 21px;
-  font-size: 16px;
-}
-
-.in-stock__item-btns {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 21px;
-  margin-right: 21px;
-  margin-top: 50px;
-}
-
-.in-stock__item-btn {
-  width: 140px;
-  height: 40px;
-  border-radius: 5px;
-  cursor: pointer;
-} */
 
 .btn__learn-more {
   width: 221px;
@@ -334,6 +230,12 @@
   .swiper-pagination-fraction {
     bottom: 15px;
     gap: 10px;
+  }
+}
+
+@media (max-width: 950px) {
+  .map-iframe {
+    height: 400px;
   }
 }
 

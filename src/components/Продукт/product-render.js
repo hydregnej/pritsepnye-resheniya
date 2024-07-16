@@ -1,5 +1,4 @@
-//Файл product-render.js
-import catalogData from './catalog-data';
+import catalogData from '../Данные-продукта/data-product';
 
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);

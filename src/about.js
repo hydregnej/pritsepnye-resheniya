@@ -1,7 +1,8 @@
-import "./styles/reset.css";
-import "./styles/fonts.css";
-import "./styles/moving-button.css";
-import "./styles/about.css";
-import "./styles/header.css";
-import "./styles/footer.css";
-import "./components/header.js";
+import "./components/Сброс-стилей/reset.css";
+import "./components/Шрфиты/fonts.css";
+import "./components/Плавающие-кнопки/moving-button.css";
+import "./components/Шапка/header.css";
+import "./components/Подвал/footer.css";
+import "./components/О-нас/about.css";
+
+import "./components/Шапка/header.js";

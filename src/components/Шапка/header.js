@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = item.querySelector('.header-menu__unwrap');
 
     item.addEventListener('mouseenter', () => {
-      // Используйте requestAnimationFrame для принудительного перерисования
+      // requestAnimationFrame для принудительного перерисования
       requestAnimationFrame(() => {
         menu.style.display = 'block';
         requestAnimationFrame(() => {
