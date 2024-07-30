@@ -100,6 +100,14 @@
   color: #D4252C;
 }
 
+.feedback__send-result {
+  align-self: center;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  line-height: 150%;
+}
+
 .feedback__btn {
   font-size: 19px;
   width: 221px;
@@ -267,6 +275,9 @@
 
   .feedback__input {
     font-size: 11px;
+  }
+  .feedback__send-result{
+    font-size: 16px;
   }
 }
 

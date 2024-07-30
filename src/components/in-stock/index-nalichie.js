@@ -1,4 +1,4 @@
-import catalogData from '../Данные-продукта/data-product'; 
+import catalogData from '../data-product/data-product';
 
 document.addEventListener('DOMContentLoaded', function () {
   const getAvailabilityValues = (items) => {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Удаляем текст в скобках
       return mainPart.replace(/\s*\(.*?\)/, '').trim();
     };
-    
+
     items.forEach(({ imgSrc, title, maximumLoadWeight, workingPlatformLength, selfWeight, axleLoad, suspension, ramps }, index) => {
       const availabilityElem = document.createElement("div");
       availabilityElem.classList.add("availability__item");

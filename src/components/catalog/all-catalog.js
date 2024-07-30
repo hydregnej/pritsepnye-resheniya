@@ -1,4 +1,4 @@
-import catalogData from '../Данные-продукта/data-product';
+import catalogData from '../data-product/data-product';
 
 document.addEventListener('DOMContentLoaded', function () {
   const items = document.querySelectorAll('.catalog__options-list-item');

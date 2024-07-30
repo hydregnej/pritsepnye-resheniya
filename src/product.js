@@ -1,13 +1,15 @@
-import "./components/Сброс-стилей/reset.css";
-import "./components/Шрфиты/fonts.css";
-import "./components/Плавающие-кнопки/moving-button.css";
-import "./components/Шапка/header.css";
-import "./components/Подвал/footer.css";
-import "./components/Хлебные-крошки/breadcrumbs.css";
-import "./components/Форма-обратной-связи/main-feedback-form.css";
-import "./components/Продукт/product.css";
+import "./components/reset/reset.css";
+import "./components/shrifts/fonts.css";
+import "./components/floating-buttons/moving-button.css";
+import "./components/header/header.css";
+import "./components/footer/footer.css";
+import "./components/breadcrumbs/breadcrumbs.css";
+import "./components/feedback-form/main-feedback-form.css";
+import "./components/product/product.css";
 
-import "./components/Шапка/header.js";
-import "./components/Продукт/product-render.js";
-import "./components/Продукт/product-render-description.js";
-import "./components/Форма-обратной-связи/feedback.js";
+import "./components/header/header.js";
+import "./components/product/product-render.js";
+import "./components/product/product-render-description.js";
+import "./components/feedback-form/feedback.js";
+import "./components/feedback-form/validation-form.js";
+

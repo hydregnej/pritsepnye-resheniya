@@ -1,3 +1,4 @@
+// файл webpack.config.js
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -21,8 +22,16 @@ module.exports = {
     static: './dist',
     compress: true,
     open: true,
+    proxy: [
+      {
+        context: ['/send-message'],
+        target: 'https://pricepresh74.ru',
+        secure: true,
+        changeOrigin: true, // Нужно для изменения заголовка Origin в запросе
+      }
+    ],
   },
-  mode: 'development', // Использовать 'production' для финального билда
+  mode: 'development',
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',
