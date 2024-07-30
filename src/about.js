@@ -1,7 +1,8 @@
-import "./styles/reset.css";
-import "./styles/fonts.css";
-import "./styles/moving-button.css";
-import "./styles/about.css";
-import "./styles/header.css";
-import "./styles/footer.css";
-import "./components/header.js";
+import "./components/reset/reset.css";
+import "./components/shrifts/fonts.css";
+import "./components/floating-buttons/moving-button.css";
+import "./components/header/header.css";
+import "./components/footer/footer.css";
+import "./components/about-us/about.css";
+
+import "./components/header/header.js";

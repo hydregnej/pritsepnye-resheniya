@@ -1,31 +1,20 @@
-import "./styles/header.css";
-import "./styles/footer.css";
-import "./styles/reset.css";
-import "./styles/fonts.css";
-import "./styles/moving-button.css";
-import "./styles/about.css";
-import "./styles/our-production.css";
-import "./styles/index.css";
+import "./components/reset/reset.css";
+import "./components/shrifts/fonts.css";
+import "./components/floating-buttons/moving-button.css";
+import "./components/header/header.css";
+import "./components/footer/footer.css";
+import "./components/in-stock/vse-v-nalichii.css";
+import "./components/catalog/catalog.css";
+import "./components/news/slider-news.css";
+import "./components/feedback-form/main-feedback-form.css";
+import "./components/home-page/index.css";
 
-import "./components/header.js";
-import "./components/slider-main.js";
-import "./components/slider-news.js";
-import "./components/catalog.js";
-import "./components/stock-in.js";
-import "./components/swiper.js";
-import "./components/feedback.js";
-
-import "./styles/social-icons.css";
-
-
-//Потом разобраться, что не нужно удалить
-// import "./styles/stock-in.css";
-// import "./styles/slider-news.css";
-// import "./styles/catalog.css";
-// import "./styles/slider-main.css";
-// //current-news.html
-// import "./components/current-news.js";
-// import "./styles/current-news.css";
-// //news.html
-// import "./components/news-page.js";
-// import "./styles/all-news.css";
+import "./components/header/header.js";
+import "./components/home-page/slider-main.js";
+import "./components/news/slider-news.js";
+import "./components/catalog/all-catalog.js";
+import "./components/in-stock/index-nalichie.js";
+import "./components/in-stock/stock-in.js";
+import "./components/feedback-form/feedback.js";
+import "./components/feedback-form/send-feedback.js";
+import "./components/feedback-form/validation-form.js";
