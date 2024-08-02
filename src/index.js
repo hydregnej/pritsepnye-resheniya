@@ -1,0 +1,20 @@
+import "./components/reset/reset.css";
+import "./components/shrifts/fonts.css";
+import "./components/floating-buttons/moving-button.css";
+import "./components/header/header.css";
+import "./components/footer/footer.css";
+import "./components/in-stock/vse-v-nalichii.css";
+import "./components/catalog/catalog.css";
+import "./components/news/slider-news.css";
+import "./components/feedback-form/main-feedback-form.css";
+import "./components/home-page/index.css";
+
+import "./components/header/header.js";
+import "./components/home-page/slider-main.js";
+import "./components/news/slider-news.js";
+import "./components/catalog/all-catalog.js";
+import "./components/in-stock/index-nalichie.js";
+import "./components/in-stock/stock-in.js";
+import "./components/feedback-form/feedback.js";
+import "./components/feedback-form/send-feedback.js";
+import "./components/feedback-form/validation-form.js";
