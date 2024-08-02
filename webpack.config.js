@@ -24,8 +24,8 @@ module.exports = {
     open: true,
     proxy: [
       {
-        context: ['/send-message'],
-        target: 'https://pricepresh74.ru',
+        context: ['/api/send-message'],
+        target: 'http://localhost:3000',
         secure: true,
         changeOrigin: true, // Нужно для изменения заголовка Origin в запросе
       }

@@ -30,7 +30,7 @@ async function sendEmailToServer(event) {
     formBtn.textContent = 'Отправка...';
     formBtn.disabled = true;
 
-    const response = await fetch('/send-message', {
+    const response = await fetch('/api/send-message', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
