@@ -12,4 +12,4 @@ import "./components/product/product-render.js";
 import "./components/product/product-render-description.js";
 import "./components/feedback-form/feedback.js";
 import "./components/feedback-form/validation-form.js";
-
+import "./components/footer/date.js";

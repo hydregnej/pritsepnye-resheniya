@@ -21,12 +21,17 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 
 .section__image {
   flex: 1 1 50%;
-  max-width: 500px;
+  max-width: 550px;
   padding: 10px;
+}
+
+.section__image_trailer {
+  /* max-width: 600px; */
 }
 
 .section__text {
@@ -59,13 +64,22 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 590px) {
   :root {
     --main-title-size: 20px;
     --main-text-size: 14px;
   }
 
+  .section__content {
+    gap: 5px;
+  }
+
+  .section__text {
+    padding: 15px;
+  }
+
   .section__image {
     width: 100%;
   }
+
 }

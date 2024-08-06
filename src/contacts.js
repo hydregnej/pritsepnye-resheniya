@@ -10,3 +10,4 @@ import "./components/contacts/contacts.css";
 import "./components/header/header.js";
 import "./components/feedback-form/feedback.js";
 import "./components/feedback-form/validation-form.js";
+import "./components/footer/date.js";

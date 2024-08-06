@@ -9,12 +9,39 @@
   position: absolute;
   top: 21%;
   left: 5%;
-  width: 50%;
+  /* width: 43%; */
   line-height: 1.4;
   font-weight: 700;
   font-size: 4vw;
   font-style: italic;
   color: #fff;
+  background-color: #00000045;
+  /* background-color: #d4252c85; */
+  padding: 20px;
+  border-radius: 15px;
+  margin-right: 51%;
+}
+
+.hero-slider__title:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 9px;
+}
+
+.hero-swiper-wrapper {
+  height: 100%;
+}
+
+.hero-swiper-slide {
+  max-height: auto;
+}
+
+.hero-slider__title_link {
+  color: #fff;
+}
+
+.hero-slider__title_link:hover {
+  text-decoration: underline;
 }
 
 .hero-slider__slide {
@@ -78,29 +105,6 @@
 /* Второй фрейм */
 
 /* Третий фрейм */
-.property-list__transported-weight,
-.property-list__self-weight,
-.property-list__platform-dimensions,
-.property-list__axle-load {
-  font-size: 22px;
-  margin-top: 22px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin-right: 21px;
-  margin-left: 21px;
-  position: relative;
-  width: 100%;
-}
-
-.property-list__red-line {
-  border-bottom: 1px solid #D4252C;
-  width: 1000%;
-  position: absolute;
-  left: -21px;
-  bottom: 0;
-}
-
 .btn__learn-more {
   width: 221px;
   height: 63px;
@@ -231,6 +235,16 @@
     bottom: 15px;
     gap: 10px;
   }
+
+  .hero-slider__title {
+    /* width: 43%; */
+    border-radius: 15px;
+  }
+
+  .hero-slider__title:hover {
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -268,6 +282,16 @@
   .swiper-pagination-fraction {
     bottom: 15px;
   }
+
+  .hero-slider__title {
+    /* width: 43%; */
+    border-radius: 15px;
+  }
+
+  .hero-slider__title:hover {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+  }
 }
 
 @media (max-width: 590px) {
@@ -301,6 +325,20 @@
     height: 47px;
     width: 142px;
   }
+
+  .hero-slider__title {
+    margin-right: 61%;
+    padding: 10px;
+    font-size: 25px;
+    line-height: 150%;
+    /* width: 43%; */
+    border-radius: 10px;
+  }
+
+  .hero-slider__title:hover {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
 }
 
 @media (max-width: 440px) {
@@ -323,6 +361,21 @@
   .swiper-pagination-bullet-active {
     width: 17px;
     height: 17px;
+  }
+
+  .hero-slider__title {
+    font-size: 22px;
+  }
+
+  .hero-slider__title:hover {
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-slider__title {
+    font-size: 20px;
   }
 }
 

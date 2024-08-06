@@ -89,11 +89,14 @@
   flex-grow: 1;
 }
 
+.property-list__text {
+  font-size: 22px;
+}
+
 .property-list__transported-weight,
 .property-list__self-weight,
 .property-list__platform-dimensions,
 .property-list__axle-load {
-  font-size: 22px;
   margin-top: 22px;
   display: flex;
   flex-wrap: nowrap;

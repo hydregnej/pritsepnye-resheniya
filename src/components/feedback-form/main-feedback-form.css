@@ -98,6 +98,20 @@
   font-size: 14px;
   align-self: flex-start;
   color: #D4252C;
+  width: 480px;
+  line-height: 130%;
+}
+
+.feedback__validate-link {
+  color: #D4252C;
+}
+
+.feedback__validate-link:visited {
+  color: #95262b;;
+}
+
+.feedback__validate-link:active {
+  color: #D4252C;
 }
 
 .feedback__send-result {
@@ -166,7 +180,8 @@
   }
 
   .feedback__validate-text {
-    font-size: 10px;
+    width: 360px;
+    font-size: 11px;
   }
 }
 
@@ -204,7 +219,8 @@
   }
 
   .feedback__validate-text {
-    font-size: 9px;
+    width: 271px;
+    font-size: 10px;
   }
 
   .feedback__btn {
@@ -255,6 +271,10 @@
     width: 100%;
   }
 
+  .feedback__validate-text {
+    width: 100%;
+  }
+
   .feedback__btn {
     font-size: 12px;
     height: 47px;
@@ -276,7 +296,8 @@
   .feedback__input {
     font-size: 11px;
   }
-  .feedback__send-result{
+
+  .feedback__send-result {
     font-size: 16px;
   }
 }

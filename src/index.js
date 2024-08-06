@@ -18,3 +18,4 @@ import "./components/in-stock/stock-in.js";
 import "./components/feedback-form/feedback.js";
 import "./components/feedback-form/send-feedback.js";
 import "./components/feedback-form/validation-form.js";
+import "./components/footer/date.js";

@@ -1,0 +1,37 @@
+.policy {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  line-height: 130%;
+}
+.policy__title {
+  margin-bottom: 20px;
+}
+.policy__section-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.policy__text {
+  margin-bottom: 1rem;
+}
+
+.policy__list {
+  list-style: none;
+  padding: 0;
+}
+
+.policy__list-item {
+  margin-bottom: 0.5rem;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+  .policy__section-title {
+      font-size: 1.25rem;
+  }
+
+  .policy__text, .policy__list-item {
+      font-size: 0.875rem;
+  }
+}

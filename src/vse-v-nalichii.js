@@ -8,3 +8,4 @@ import "./components/in-stock/vse-v-nalichii.css";
 
 import "./components/header/header.js";
 import "./components/in-stock/index-nalichie.js";
+import "./components/footer/date.js";

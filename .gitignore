@@ -1,1 +1,27 @@
+# Node modules
 node_modules/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+*.sw?
+
+# Test coverage
+coverage/
+
+# Dependency directories
+jspm_packages/

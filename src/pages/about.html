@@ -5,9 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Прицепные Решения</title>
-  <!-- не забудь вставить иконку на вкладку -->
-  <!-- <link rel="shortcut icon" href="./icons/logo-black.png" type="image/x-icon"> -->
+  <title>Прицепные Решения - О Компании</title>
+  <link rel="icon" href="https://delotehniki74.ru/wp-content/uploads/2020/06/cropped-favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="https://delotehniki74.ru/wp-content/uploads/2020/06/cropped-favicon-192x192.png"
+    sizes="192x192">
+  <link rel="apple-touch-icon" href="https://delotehniki74.ru/wp-content/uploads/2020/06/cropped-favicon-180x180.png">
+  <meta name="msapplication-TileImage"
+    content="https://delotehniki74.ru/wp-content/uploads/2020/06/cropped-favicon-270x270.png">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
@@ -17,19 +21,25 @@
 
 <body>
   <div class="moving-btn">
+
     <div class="moving-btn__social whatsapp"><img src="./icons/icon-sticky-whatsapp.svg" class="moving-btn__social-logo"
         alt="whatsapp">
-      <span class="moving-btn__social-whatsapp tooltip"><a href="#" class="moving-btn__social-link">Whatsapp</a></span>
+      <span class="moving-btn__social-whatsapp tooltip"><a href="https://wa.me/79068685185?text=Добрый день!%0A"
+          class="moving-btn__social-link" target="_blank">WhatsApp</a></span>
     </div>
+
     <div class="moving-btn__social telegram"><img src="./icons/icon-sticky-telegram.svg" class="moving-btn__social-logo"
         alt="telegram">
-      <span class="moving-btn__social-telegram tooltip"><a href="#" class="moving-btn__social-link">ТЕЛЕГРАММ</a></span>
+      <span class="moving-btn__social-telegram tooltip"><a href="https://t.me/pricepresh74"
+          class="moving-btn__social-link" target="_blank">Telegram</a></span>
     </div>
+
     <div class="moving-btn__social email"><img src="./icons/icon-sticky-email.svg" class="moving-btn__social-logo"
         alt="email">
       <span class="moving-btn__social-email tooltip"><a href="mailto:pricepresh74@mail.ru"
-          class="moving-btn__social-link">ПОЧТА</a></span>
+          class="moving-btn__social-link" target="_blank">Mail</a></span>
     </div>
+
   </div>
 
   <div class="wrapper">
@@ -75,7 +85,7 @@
             <li class="nav-header__item">
               <a href="./vse-v-nalichii.html" class="nav-header__link">Наличие</a>
             </li>
-            <li class="nav-header__item nav-header__item--dropdown-about">
+            <li class="nav-header__item">
               <a href="./about.html" class="nav-header__link">О нас</a>
               <div class="header-menu__unwrap">
                 <ul class="header-menu__lists">
@@ -85,19 +95,29 @@
                 </ul>
               </div>
             </li>
+            <!-- <li class="nav-header__item nav-header__item--dropdown-about">
+              <a href="./about.html" class="nav-header__link">О нас</a>
+              <div class="header-menu__unwrap">
+                <ul class="header-menu__lists">
+                  <li class="header-menu__item"><a href="#" class="header-menu__link">О компании</a></li>
+                  <li class="header-menu__item"><a href="#" class="header-menu__link">Производство</a></li>
+                  <li class="header-menu__item"><a href="#" class="header-menu__link">Новости</a></li>
+                </ul>
+              </div>
+            </li> -->
             <li class="nav-header__item"><a href="./contacts.html" class="nav-header__link">Контакты</a></li>
           </ul>
         </nav>
 
         <div class="info-header">
           <div class="social-header">
-            <a href="#" class="social-header__link"><img src="./icons/icon_telegram.svg" class="social-header__telegram"
-                alt="Telegram"></a>
-            <a href="#" class="social-header__link"><img src="./icons/icon_whatsapp.svg" class="social-header__whatsapp"
-                alt="Whatsapp"></a>
+            <a href="https://t.me/pricepresh74" class="social-header__link" target="_blank"><img
+                src="./icons/icon_telegram.svg" class="social-header__telegram" alt="Telegram"></a>
+            <a href="https://wa.me/79068685185?text=Добрый день!%0A" class="social-header__link" target="_blank"><img
+                src="./icons/icon_whatsapp.svg" class="social-header__whatsapp" alt="Whatsapp"></a>
           </div>
-          <a href="tel:+78005051323" class="info-header__call">8 800 505-13-23</a>
-          <a href="mailto:pricepresh74@mail.ru" class="info-header__email">pricepresh74@mail.ru</a>
+          <a href="tel:+78005051323" class="info-header__call" target="_blank">8 800 505-13-23</a>
+          <a href="mailto:pricepresh74@mail.ru" class="info-header__email" target="_blank">pricepresh74@mail.ru</a>
         </div>
       </div>
 
@@ -130,7 +150,14 @@
             <li class="modal-nav__item">
               <a href="./vse-v-nalichii.html" class="modal-nav__link">Наличие</a>
             </li>
-            <li class="modal-nav__item modal-nav__item--dropdown-about">
+
+            <li class="modal-nav__item">
+              <div class="modal-nav__list modal-nav-about-us">
+                <a href="./about.html" class="modal-nav__link">О нас</a>
+              </div>
+            </li>
+
+            <!-- <li class="modal-nav__item modal-nav__item--dropdown-about">
               <div class="modal-nav__list modal-nav-about-us">
                 <a href="./about.html" class="modal-nav__link">О нас</a>
                 <img src="./icons/down_dlxa.svg" alt="Развернуть список" class="modal-nav__list-img">
@@ -142,15 +169,15 @@
                   <li class="modal-menu__item"><a href="#" class="modal-menu__link">Новости</a></li>
                 </ul>
               </div>
-            </li>
+            </li> -->
             <li class="modal-nav__item"><a href="./contacts.html" class="modal-nav__link">Контакты</a></li>
           </ul>
         </nav>
         <div class="info-modal">
           <div class="social-modal">
-            <a href="#" class="social-modal__link">
+            <a href="https://t.me/pricepresh74" class="social-modal__link" target="_blank">
               <img src="./icons/icon_telegram.svg" class="social-modal__telegram" alt="Telegram"></a>
-            <a href="#" class="social-modal__link">
+            <a href="https://wa.me/79068685185?text=Добрый день!%0A" class="social-modal__link" target="_blank">
               <img src="./icons/icon_whatsapp.svg" class="social-modal__whatsapp" alt="Whatsapp"></a>
           </div>
         </div>
@@ -165,7 +192,8 @@
       <section class="section section--about">
         <h1 class="section__title">О компании</h1>
         <div class="section__content">
-          <img src="https://via.placeholder.com/500x300" alt="Прицеп" class="section__image">
+          <img src="./image/about-machine.jpg" alt="Фото с производства Компании Прицепные Решения"
+            class="section__image">
           <div class="section__text">
             <p>Динамично развивающееся предприятие по производству прицепной техники. При производстве полуприцепов
               используются только современные материалы и комплектующие. Предлагаем к поставке прицепы и
@@ -186,7 +214,7 @@
               гордимся своей работой и стремимся к постоянному совершенствованию производственных процессов, чтобы
               обеспечить оптимальный результат для наших клиентов.</p>
           </div>
-          <img src="https://via.placeholder.com/500x300" alt="Прицеп" class="section__image">
+          <img src="./image/about-trailer.png" alt="Прицеп" class="section__image section__image_trailer">
         </div>
       </section>
 
@@ -212,7 +240,7 @@
                 <a href="https://yandex.ru/maps/-/CDSa7FYd" class="footer__link" target="_blank"> г. Челябинск,
                   ул. Автодорожная, <br> д. 17, офис 205</a>
               </div>
-              <div href="" class="footer__info-block footer__info-block_none-cursor">
+              <div class="footer__info-block footer__info-block_none-cursor">
                 <img src="./icons/Clock.svg" alt="Режим работы Прицепные Решения" class="footer__icon">
                 <p class="footer__link footer__info"> пн-пт с 8:30 до 17:30</p>
               </div>
@@ -224,10 +252,10 @@
               </div>
             </div>
             <div class="footer__social">
-              <a href="#" class="footer__social-link"><img src="./icons/Whatsapp.svg" alt="WhatsApp Прицепные Решения"
-                  class="footer__icon footer__icon_tg"></a>
-              <a href="#" class="footer__social-link"><img src="./icons/Telegram.svg" alt="Telegram Прицепные Решения"
-                  class="footer__icon footer__icon_wa"></a>
+              <a href="https://wa.me/79068685185?text=Добрый день!%0A" class="footer__social-link" target="_blank"><img
+                  src="./icons/Whatsapp.svg" alt="WhatsApp Прицепные Решения" class="footer__icon footer__icon_tg"></a>
+              <a href="https://t.me/pricepresh74" class="footer__social-link" target="_blank"><img
+                  src="./icons/Telegram.svg" alt="Telegram Прицепные Решения" class="footer__icon footer__icon_wa"></a>
             </div>
           </div>
 
@@ -259,7 +287,7 @@
                   <a href="./vse-v-nalichii.html" class="footer__link">Наличие</a>
                 </li>
                 <li class="footer__list-item">
-                  <a href="#" class="footer__link">О нас</a>
+                  <a href="./about.html" class="footer__link">О нас</a>
                 </li>
                 <li class="footer__list-item">
                   <a href="./contacts.html" class="footer__link">Контакты</a>
@@ -281,7 +309,9 @@
             </div>
           </form>
           <div class="footer__copyright">
-            <p class="footer__copyright-text">© 2024 Прицепные решения ДТ</p>
+            <p class="footer__copyright-text">© <span id="year"></span> Прицепные решения ДТ</p>
+            <a href="./privacy-policy.html" class="footer__copyright-text footer__policy" target="_blank">Политика
+              конфиденциальности</a>
           </div>
         </div>
 

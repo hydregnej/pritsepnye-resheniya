@@ -384,9 +384,17 @@
   :root {
     --availability-width: 95px;
     --availability-height: 31px;
+    --product-info-title-text-gap: 35px;
   }
 
   .product__title {
     max-width: 250px;
   }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --product-info-title-text-size: 12px;
+  }
+
 }

@@ -6,3 +6,4 @@ import "./components/footer/footer.css";
 import "./components/about-us/about.css";
 
 import "./components/header/header.js";
+import "./components/footer/date.js";

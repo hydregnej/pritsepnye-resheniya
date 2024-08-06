@@ -13,6 +13,7 @@ module.exports = {
     product: './src/product.js',
     about: './src/about.js',
     contacts: './src/contacts.js',
+    privacyPolicy: './src/privacy-policy.js',
   },
   output: {
     filename: '[name].js',
@@ -76,6 +77,13 @@ module.exports = {
       template: './src/pages/contacts.html',
       chunks: ['contacts'],
       title: 'Контакты',
+      inject: 'body',
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'privacy-policy.html',
+      template: './src/pages/privacy-policy.html',
+      chunks: ['privacyPolicy'],
+      title: 'Политикой конфиденциальности',
       inject: 'body',
     }),
   ],
