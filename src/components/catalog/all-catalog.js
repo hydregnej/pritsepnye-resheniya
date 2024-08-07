@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 <img src="${card.imgSrc}" alt="trailer photo" class="catalog__card-img">
                 <div class="catalog__card-title">${card.title}</div>
                 <div class="catalog__card-buttons">
-                    <button class="card-btn pdf">Скачать PDF</button>
                     <a href="./product.html?category=${category}&id=${index}" class="card-btn learn">перейти</a>
                 </div>
             `;

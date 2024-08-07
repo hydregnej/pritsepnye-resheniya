@@ -79,7 +79,7 @@
 
 .catalog__card-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: 33px 21px 44px 21px;
 }
 

@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <p class="product-info__text-description">${maximumLoadWeight}</p>
                 </div>
                 <div class="product-info__description-block">
-                  <p class="product-info__text product-info__text-main">Длина рабочей платформы</p>
+                  <p class="product-info__text product-info__text-main">Длина платформы</p>
                   <p class="product-info__text-description">${workingPlatformLength}</p>
                 </div>
                 <div class="product-info__description-block">
