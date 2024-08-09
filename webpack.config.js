@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -16,8 +17,9 @@ module.exports = {
     privacyPolicy: './src/privacy-policy.js',
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   devServer: {
     static: './dist',
@@ -35,7 +37,7 @@ module.exports = {
   mode: 'development',
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -85,6 +87,13 @@ module.exports = {
       chunks: ['privacyPolicy'],
       title: 'Политикой конфиденциальности',
       inject: 'body',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/assets/icons', to: 'icons' },
+        { from: 'src/assets/image', to: 'image' },
+        { from: 'src/assets/pdf', to: 'pdf' },
+      ],
     }),
   ],
   module: {

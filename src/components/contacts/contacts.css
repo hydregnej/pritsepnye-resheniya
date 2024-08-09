@@ -20,7 +20,7 @@
 
 .main__text {
   font-size: calc(var(--contacts-title-font-size) / 2.5);
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 .contacts__title {
@@ -79,6 +79,11 @@
 
 .footer {
   margin-top: 0
+}
+
+.pdf {
+  background-color: #d4252c;
+  color: #fff;
 }
 
 @media (max-width: 1500px) {
@@ -163,6 +168,12 @@
 
   .info__block {
     width: 100%;
+  }
+
+  .card-btn {
+    font-size: 11px;
+    height: 30px;
+    width: 90px;
   }
 }
 

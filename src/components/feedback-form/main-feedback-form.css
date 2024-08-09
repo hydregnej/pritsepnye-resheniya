@@ -28,8 +28,8 @@
 }
 
 .animate-form:after {
-  right: 672px;
-  width: 451px;
+  right: 594px;
+  width: 418px;
 }
 
 .feedback__form {
@@ -99,7 +99,7 @@
   align-self: flex-start;
   color: #D4252C;
   width: 480px;
-  line-height: 130%;
+  line-height: 1.3;
 }
 
 .feedback__validate-link {
@@ -107,7 +107,8 @@
 }
 
 .feedback__validate-link:visited {
-  color: #95262b;;
+  color: #95262b;
+  ;
 }
 
 .feedback__validate-link:active {
@@ -119,7 +120,7 @@
   font-weight: 700;
   font-size: 18px;
   text-align: center;
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 .feedback__btn {
@@ -170,8 +171,8 @@
 
   .animate-form::after {
     display: block;
-    width: 297px;
-    right: 439px;
+    right: 386px;
+    width: 277px;
   }
 
   .feedback__input {
@@ -194,15 +195,18 @@
     font-size: 25px;
   }
 
-  .feedback__h2::after {
+  /* .feedback__h2::after {
     top: 33px;
+  } */
+  .animate-form:after,
+  .feedback__h2:after {
+    display: none;
   }
-
-  .animate-form:after {
+  /* .animate-form:after {
     display: block;
-    right: 305px;
-    width: 207px;
-  }
+    right: 267px;
+    width: 197px;
+  } */
 
   .feedback__label {
     font-size: 14px;
@@ -252,11 +256,11 @@
     font-size: 20px;
   }
 
-  .animate-form::after {
-    width: 165px;
-    right: 244px;
+  /* .animate-form::after {
+    right: 216px;
     top: 28px;
-  }
+    width: 152px;
+  } */
 
   .feedback__form {
     width: 100%;
@@ -287,11 +291,11 @@
     font-size: 18px;
   }
 
-  .animate-form::after {
-    right: 218px;
+  /* .animate-form::after {
+    right: 193px;
     top: 24px;
-    width: 150px;
-  }
+    width: 140px;
+  } */
 
   .feedback__input {
     font-size: 11px;
@@ -307,11 +311,11 @@
     font-size: 16px;
   }
 
-  .animate-form:after {
-    right: 195px;
+  /* .animate-form:after {
+    right: 172px;
     top: 20px;
-    width: 134px;
-  }
+    width: 124px;
+  } */
 
   .feedback__input {
     font-size: 10px;
@@ -320,16 +324,16 @@
 
 @media (max-width: 350px) {
   .feedback__h2 {
-    line-height: 130%;
+    line-height: 1.3;
     width: 260px;
     font-size: 16px;
   }
 
-  .animate-form::after {
-    right: 80px;
+  /* .animate-form::after {
+    right: 130px;
     top: 20px;
-    width: 135px;
-  }
+    width: 125px;
+  } */
 
   .feedback__input {
     font-size: 10px;

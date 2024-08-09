@@ -13,9 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
       cardElement.innerHTML = `
                 <img src="${card.imgSrc}" alt="trailer photo" class="catalog__card-img">
+
                 <div class="catalog__card-title">${card.title}</div>
+                
                 <div class="catalog__card-buttons">
-                    <a href="./product.html?category=${category}&id=${index}" class="card-btn learn">перейти</a>
+                    <a href="./product.html?category=${category}&id=${index}" class="card-btn learn">подробнее</a>
                 </div>
             `;
       cardContainer.appendChild(cardElement);

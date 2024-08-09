@@ -160,7 +160,7 @@
 
 .footer__link {
   font-weight: 500;
-  line-height: 130%;
+  line-height: 1.3;
   font-size: 28px;
   color: #fff;
   text-decoration: none;
@@ -186,7 +186,7 @@
 .footer__copyright-text {
   font-weight: 400;
   font-size: 24px;
-  line-height: 65%;
+  line-height: 0.65;
   text-align: center;
   color: #fff;
   opacity: 0.8;

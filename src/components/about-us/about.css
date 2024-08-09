@@ -2,7 +2,6 @@
 :root {
   --main-title-size: 64px;
   --main-title-margin-bot: 20px;
-
   --main-text-size: 24px;
 }
 
@@ -30,16 +29,12 @@
   padding: 10px;
 }
 
-.section__image_trailer {
-  /* max-width: 600px; */
-}
-
 .section__text {
   display: flex;
   flex-direction: column;
   gap: 20px;
   max-width: 500px;
-  line-height: 150%;
+  line-height: 1.5;
   flex: 1 1 50%;
   padding: 10px;
   font-size: var(--main-text-size);
@@ -65,6 +60,7 @@
 
   .section__image {
     width: 100%;
+    max-width: none;
   }
 }
 
@@ -84,6 +80,6 @@
 
   .section__image {
     width: 100%;
+    max-width: none;
   }
-
 }
