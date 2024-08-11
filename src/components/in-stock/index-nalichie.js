@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Функция для извлечения части до слэша и удаления текста в скобках
     const cleanValue = (value) => {
       // Разделяем строку по слэшу и берем первую часть
-      let [mainPart] = value.split(' / ');
+      let [mainPart] = value.split(' | ');
       // Удаляем текст в скобках
       return mainPart.replace(/\s*\(.*?\)/, '').trim();
     };

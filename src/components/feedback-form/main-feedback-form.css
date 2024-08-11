@@ -28,8 +28,8 @@
 }
 
 .animate-form:after {
-  right: 594px;
-  width: 418px;
+  right: 667px;
+  width: 457px;
 }
 
 .feedback__form {
@@ -82,14 +82,14 @@
   border-radius: 4px;
   font-size: 18px;
   font-weight: 400;
-  height: 50px;
+  /* height: 50px; */
   outline: none;
   padding: 15px;
   width: 480px;
 }
 
 .feedback__input-message {
-  height: 169px;
+  height: 145px;
   resize: none;
   overflow-y: auto;
 }
@@ -171,8 +171,8 @@
 
   .animate-form::after {
     display: block;
-    right: 386px;
-    width: 277px;
+    right: 437px;
+    width: 300px;
   }
 
   .feedback__input {

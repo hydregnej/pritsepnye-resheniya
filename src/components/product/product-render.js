@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="product__title-container">
               <h1 class="product__title">${title}</h1>
             </div>
-            <div class="availability" style="display: ${inStock ? 'block' : 'none'};">
-              <p class="availability_text">В наличии</p>
+            <div class="availability-icon" style="display: ${inStock ? 'flex' : 'none'};">
+              <p class=".availability-icon__text">В наличии</p>
             </div>
             <div class="swiper-container gallery-top">
               <div class="swiper-wrapper">

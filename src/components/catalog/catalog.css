@@ -76,7 +76,7 @@
 }
 
 .catalog__card-img {
-  width: 100%;
+  /* width: 100%; */
   padding: 0 20px;
 }
 
@@ -267,10 +267,6 @@
 
   .catalog__card-title {
     font-size: 11px;
-  }
-
-  .catalog__options-list-item {
-    /* font-size: 7px; */
   }
 }
 

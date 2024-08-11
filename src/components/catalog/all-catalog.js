@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
       cardElement.classList.add('catalog__card');
 
       cardElement.innerHTML = `
-                <img src="${card.imgSrc}" alt="trailer photo" class="catalog__card-img">
+                <img src="${card.imgSrc}" alt="Фото: ${card.title}" class="catalog__card-img">
 
                 <div class="catalog__card-title">${card.title}</div>
                 
