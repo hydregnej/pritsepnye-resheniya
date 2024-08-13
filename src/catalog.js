@@ -1,4 +1,4 @@
-import "./components/reset/normalize.css";
+import "./components/normalize/normalize.css";
 import "./components/shrifts/fonts.css";
 import "./components/floating-buttons/moving-button.css";
 import "./components/header/header.css";

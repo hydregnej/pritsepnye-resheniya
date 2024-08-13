@@ -21,20 +21,22 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  devServer: {
-    static: './dist',
-    compress: true,
-    open: true,
-    proxy: [
-      {
-        context: ['/api/send-message'],
-        target: 'http://localhost:3000',
-        secure: true,
-        changeOrigin: true, // Нужно для изменения заголовка Origin в запросе
-      }
-    ],
-  },
-  mode: 'development',
+  // devServer: {
+  //   static: './dist',
+  //   compress: true,
+  //   open: true,
+  //   proxy: [
+  //     {
+  //       context: ['/api/send-message'],
+  //       target: 'http://localhost:3000',
+  //       secure: true,
+  //       changeOrigin: true, // Нужно для изменения заголовка Origin в запросе
+  //     }
+  //   ],
+  // },
+  mode: 'production',
+  // mode: 'development',
+  devtool: false,
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
@@ -45,6 +47,11 @@ module.exports = {
       chunks: ['index'],
       title: 'Прицепные Решения',
       inject: 'body',
+      meta: {
+        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов в Челябинске. Мы предлагаем качественные прицепы для легковых, грузовых и коммерческих нужд. Обратитесь к нам для надежных и проверенных решений',
+        robots: 'index, follow',
+        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+      }
     }),
     new HtmlWebpackPlugin({
       filename: 'catalog.html',
@@ -52,6 +59,11 @@ module.exports = {
       chunks: ['catalog'],
       title: 'Каталог',
       inject: 'body',
+      meta: {
+        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        robots: 'index, follow',
+        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+      }
     }),
     new HtmlWebpackPlugin({
       filename: 'vse-v-nalichii.html',
@@ -59,6 +71,11 @@ module.exports = {
       chunks: ['vseVNalichii'],
       title: 'В наличии',
       inject: 'body',
+      meta: {
+        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        robots: 'index, follow',
+        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+      }
     }),
     new HtmlWebpackPlugin({
       filename: 'product.html',
@@ -66,6 +83,11 @@ module.exports = {
       chunks: ['product'],
       title: 'Продукт',
       inject: 'body',
+      meta: {
+        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        robots: 'index, follow',
+        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+      }
     }),
     new HtmlWebpackPlugin({
       filename: 'about.html',
@@ -73,6 +95,11 @@ module.exports = {
       chunks: ['about'],
       title: 'О нас',
       inject: 'body',
+      meta: {
+        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        robots: 'index, follow',
+        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+      }
     }),
     new HtmlWebpackPlugin({
       filename: 'contacts.html',
@@ -80,6 +107,11 @@ module.exports = {
       chunks: ['contacts'],
       title: 'Контакты',
       inject: 'body',
+      meta: {
+        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        robots: 'index, follow',
+        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+      }
     }),
     new HtmlWebpackPlugin({
       filename: 'privacy-policy.html',
@@ -87,6 +119,11 @@ module.exports = {
       chunks: ['privacyPolicy'],
       title: 'Политикой конфиденциальности',
       inject: 'body',
+      meta: {
+        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        robots: 'index, follow',
+        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+      }
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -105,6 +142,14 @@ module.exports = {
           'css-loader',
           'postcss-loader'
         ],
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/i,
+        type: 'asset/resource',
+
+        generator: {
+          filename: 'images/[name].[hash][ext][query]',
+        },
       },
     ],
   },
