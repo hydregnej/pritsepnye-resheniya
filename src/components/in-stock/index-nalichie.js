@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const availabilityContainer = document.querySelector(".availability__container");
 
     // Функция для извлечения части до слэша и удаления текста в скобках
-    const cleanValue = (value) => {
-      // Разделяем строку по слэшу и берем первую часть
-      let [mainPart] = value.split(' | ');
-      // Удаляем текст в скобках
-      return mainPart.replace(/\s*\(.*?\)/, '').trim();
-    };
+    // const cleanValue = (value) => {
+    //   // Разделяем строку по слэшу и берем первую часть
+    //   let [mainPart] = value.split(' | ');
+    //   // Удаляем текст в скобках
+    //   return mainPart.replace(/\s*\(.*?\)/, '').trim();
+    // };
 
     items.forEach(({ imgSrc, title, pdf, price, maximumLoadWeight, workingPlatformLength, selfWeight, platformWidth, suspension, ramps }, index) => {
       const availabilityElem = document.createElement("div");
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             <ul class="property-list__value">
               <li class="property-list__text property-list__transported-weight property-list__text_value">${maximumLoadWeight}</li>
-              <li class="property-list__text property-list__self-weight property-list__text_value">${cleanValue(selfWeight)}</li>
+              <li class="property-list__text property-list__self-weight property-list__text_value">${selfWeight}</li>
               <li class="property-list__text property-list__platform-dimensions property-list__text_value">${workingPlatformLength}</li>
               <li class="property-list__text property-list__axle-load property-list__text_value">${platformWidth}</li>
             </ul>

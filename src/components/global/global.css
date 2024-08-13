@@ -1,0 +1,155 @@
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.card-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pdf {
+  border: 1px solid #D4252C;
+  color: #D4252C;
+  font-size: 16px;
+}
+
+.pdf:hover {
+  background-color: #D4252C;
+  color: #ffffff;
+}
+
+.pdf:active,
+.learn:active {
+  border: none;
+  background-color: #C6C6C6;
+  color: rgba(33, 33, 33, 0.69);
+}
+
+.learn {
+  border: none;
+  background-color: #D4252C;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.learn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.cookie-banner {
+  line-height: 1.5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  z-index: 11000;
+  font-size: 17px;
+}
+
+.cookie-banner__link {
+  color: #D4252C;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.cookie-banner__link:hover {
+  color: #B81F1A;
+  text-decoration: underline;
+}
+
+.cookie-button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  background-color: #D4252C;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cookie-button:hover {
+  background-color: #B81F1A;
+}
+
+.cookie-button:active {
+  background-color: #A11A18;
+  transform: scale(0.98);
+}
+
+@media (max-width: 1300px) {
+  .card-btn {
+    font-size: 14px;
+    width: 110px;
+  }
+
+  .learn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-btn {
+    font-size: 11px;
+    height: 30px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 880px) {
+  .card-btn {
+    font-size: 10px;
+    height: 25px;
+    width: 81px;
+  }
+
+  .availability__item-btns {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 790px) {
+  .card-btn {
+    font-size: 11px;
+    height: 30px;
+    width: 90px;
+  }
+}
+
+@media (max-width: 520px) {
+  .card-btn {
+    font-size: 11px;
+    height: 35px;
+    width: 95px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0 10px;
+  }
+}
