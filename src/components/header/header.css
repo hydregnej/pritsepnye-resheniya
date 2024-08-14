@@ -113,13 +113,14 @@
   font-style: normal;
   font-size: 22px;
   opacity: 0;
-  clip-path: inset(100% 0 100% 0);
-  transition: clip-path 0.5s ease, opacity 0.5s ease;
+  /* clip-path: inset(100% 0 100% 0); */
+  /* transition: clip-path 0.5s ease, opacity 0.5s ease; */
 }
 
 .animated-logo__text.active {
   opacity: 1;
   clip-path: inset(0 0 0 0);
+  transition: opacity 0.1s ease, clip-path 0.1s ease;
 }
 
 .animated-logo__up-short-line {
@@ -408,7 +409,6 @@
   .info-header__email {
     font-size: calc(24px * 0.75);
     padding: 12px 14px;
-    border: 1px solid #000000;
   }
 
   .animated-logo__text {

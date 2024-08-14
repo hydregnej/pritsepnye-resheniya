@@ -5,25 +5,35 @@ const downLongLine = document.querySelector('.animated-logo__down-long-line');
 const downShortLine = document.querySelector('.animated-logo__down-short-line');
 const logoText = document.querySelector('.animated-logo__text');
 
-function animateText() {
-  logoText.classList.add('active');
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const logoText = document.querySelector(".animated-logo__text");
+  const upShortLine = document.querySelector(".animated-logo__up-short-line");
+  const upLongLine = document.querySelector(".animated-logo__up-long-line");
+  const downLongLine = document.querySelector(".animated-logo__down-long-line");
+  const downShortLine = document.querySelector(".animated-logo__down-short-line");
 
-setTimeout(animateText, 830);
+  function animateText() {
+    logoText.classList.add('active');
+  }
 
-gsap.set([upShortLine, upLongLine, downLongLine, downShortLine], { transformOrigin: "center", scaleX: 0 });
+  // Устанавливаем начальные стили
+  gsap.set([upShortLine, upLongLine, downLongLine, downShortLine], { transformOrigin: "center", scaleX: 0 });
 
-gsap.timeline()
-  .to([upShortLine, upLongLine, downShortLine, downLongLine], {
-    scaleX: 1,
-    duration: 1,
-    ease: "power2.out"
-  })
-  .to([upShortLine, upLongLine, downShortLine, downLongLine], {
-    y: (i) => i < 2 ? -20 : 20,
-    duration: 0.5,
-    ease: "power2.out"
-  });
+  // Создаем таймлайн и добавляем анимации
+  gsap.timeline()
+    .to([upShortLine, upLongLine, downShortLine, downLongLine], {
+      scaleX: 1,
+      duration: 1,
+      ease: "power2.out"
+    })
+    .to([upShortLine, upLongLine, downShortLine, downLongLine], {
+      y: (i) => i < 2 ? -20 : 20,
+      duration: 0.5,
+      ease: "power2.out",
+      onComplete: animateText // Вызовем функцию animateText после завершения анимации
+    });
+});
+
 
 // Бургер-меню
 const burger = document.querySelector('.burger')
