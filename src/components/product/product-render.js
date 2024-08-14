@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const { title, inStock, additionalImages, descriptionTitle, descriptionMain, descriptionOptional, maximumLoadWeight, workingPlatformLength, suspension, ramps } = catalogData[category][productId];
 
-    headTitle.innerText = `${title}`;
+    headTitle.innerText = `Прицепные Решения ДТ - ${title}`;
 
     const productDetailsContainer = document.getElementById('product-details');
 

@@ -55,6 +55,7 @@
   font-size: 24px;
   padding-bottom: 37px;
   color: #000;
+  transition: color 0.3s ease;
 }
 
 .nav-header__link:hover {
@@ -82,15 +83,15 @@
 .info-header__email {
   text-decoration: none;
   font-size: 24px;
-  color: #d4252c;
-  border: 2px solid #0000009e;
-  border-radius: 10px;
+  color: #000;
   padding: 13px 16px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .info-header__call:hover,
 .info-header__email:hover {
   text-decoration: underline;
+  color: #d4252c;
 }
 
 .animated-logo {
