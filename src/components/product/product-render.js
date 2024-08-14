@@ -1,6 +1,4 @@
 import catalogData from '../data-product/data-product';
-// import catalogData from '../data-product/data.json';
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
