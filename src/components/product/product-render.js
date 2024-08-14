@@ -2,54 +2,54 @@ import catalogData from '../data-product/data-product';
 // import catalogData from '../data-product/data.json';
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const category = urlParams.get('category');
-  const productId = urlParams.get('id');
+// document.addEventListener('DOMContentLoaded', () => {
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get('category');
+const productId = urlParams.get('id');
 
-  if (category && productId) {
-    const headTitle = document.querySelector('title');
+if (category && productId) {
+  const headTitle = document.querySelector('title');
 
-    const { title, inStock, additionalImages, descriptionTitle, descriptionMain, descriptionOptional, maximumLoadWeight, workingPlatformLength, suspension, ramps } = catalogData[category][productId];
+  const { title, inStock, additionalImages, descriptionTitle, descriptionMain, descriptionOptional, maximumLoadWeight, workingPlatformLength, suspension, ramps } = catalogData[category][productId];
 
-    headTitle.innerText = `Прицепные Решения ДТ - ${title}`;
+  headTitle.innerText = `Прицепные Решения ДТ - ${title}`;
 
-    const productDetailsContainer = document.getElementById('product-details');
+  const productDetailsContainer = document.getElementById('product-details');
 
-    // Создание HTML для слайдов основной галереи
-    const mainSlidesHTML = additionalImages.map(src => `
+  // Создание HTML для слайдов основной галереи
+  const mainSlidesHTML = additionalImages.map(src => `
       <div class="swiper-slide swiper-slide-top">
         <img src="${src}" alt="Полуприцеп Прицепные Решения: ${title}" class="swiper-slide-top-img">
       </div>
     `).join('');
 
-    // Создание HTML для миниатюр
-    const thumbsSlidesHTML = additionalImages.map(src => `
+  // Создание HTML для миниатюр
+  const thumbsSlidesHTML = additionalImages.map(src => `
       <div class="swiper-slide">
         <img src="${src}" alt="Полуприце Прицепные Решения: ${title}" class="swiper-slide-bot-img">
       </div>
     `).join('');
 
-    const mainDescriptionHTML = descriptionMain.map(text => `
+  const mainDescriptionHTML = descriptionMain.map(text => `
       <p class="product-info__text-main-block">${text}</p>
     `).join('');
 
-    const optionalDescriptionHTML = descriptionOptional.map(text => `
+  const optionalDescriptionHTML = descriptionOptional.map(text => `
       <p class="product-info__text-main-block">${text}</p>
     `).join('');
 
-    let match = title.match(/ДТ \d+-\d+/);
-    let nameSemiTrailer = match ? match[0] : '';
+  let match = title.match(/ДТ \d+-\d+/);
+  let nameSemiTrailer = match ? match[0] : '';
 
-    // Создаем элемент для содержимого
-    const contentElement = document.createElement('div');
+  // Создаем элемент для содержимого
+  const contentElement = document.createElement('div');
 
-    contentElement.innerHTML = `
+  contentElement.innerHTML = `
       <div class="main-container">
         <div class="main__breadcrumbs">
-          <a href="./index.html">Главная </a>
+          <a href="/">Главная </a>
           <span> / </span>
-          <a href="./catalog.html">Каталог</a>
+          <a href="/catalog">Каталог</a>
           <span> / </span>
           <span>${title}</span>
         </div>
@@ -109,30 +109,30 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     `;
 
-    productDetailsContainer.prepend(contentElement);
+  productDetailsContainer.prepend(contentElement);
 
-    // Инициализация Swiper.js после обновления DOM
-    const galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 10,
-      slidesPerView: 5,
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
+  // Инициализация Swiper.js после обновления DOM
+  const galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+  });
 
-    const galleryTop = new Swiper('.gallery-top', {
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-    });
+  const galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+  });
 
-  } else {
-    const productDetailsContainer = document.getElementById('product-details');
-    productDetailsContainer.innerHTML = '<p>Продукт не найден</p>';
-  }
-});
+} else {
+  const productDetailsContainer = document.getElementById('product-details');
+  productDetailsContainer.innerHTML = '<p>Продукт не найден</p>';
+}
+// });
