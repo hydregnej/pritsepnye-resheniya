@@ -10,4 +10,5 @@ import "./components/about-us/about.css";
 
 import "./components/header/header.js";
 import "./components/footer/date.js";
-import "./components/global/global.css";
+import "./components/global/global.js";
+

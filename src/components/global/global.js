@@ -1,32 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const cookieBanner = document.getElementById('cookie-banner');
-  const acceptCookiesButton = document.getElementById('accept-cookies');
+  const banner = document.getElementById('cookie-banner');
+  const acceptButton = document.getElementById('accept-cookies');
 
-  function setCookie(name, value, days) {
-    const d = new Date();
-    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
-    const expires = `expires=${d.toUTCString()}`;
-    document.cookie = `${name}=${value};${expires};path=/`;
+  // Проверка, принят ли куки
+  if (!localStorage.getItem('cookiesAccepted')) {
+      banner.style.display = 'flex';
   }
 
-  function getCookie(name) {
-    const nameEQ = `${name}=`;
-    const ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) === ' ') c = c.substring(1);
-      if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
-    }
-    return null;
-  }
+  // Обработчик клика по кнопке "Принять"
+  acceptButton.addEventListener('click', () => {
+      localStorage.setItem('cookiesAccepted', 'true');
+      banner.style.display = 'none';
+  });
 
-  // Check if cookie consent has already been given
-  if (!getCookie('cookieConsent')) {
-    cookieBanner.style.display = 'block';
-  }
-
-  acceptCookiesButton.addEventListener('click', () => {
-    setCookie('cookieConsent', 'true', 365);
-    cookieBanner.style.display = 'none';
+  // Очистка данных (для демонстрации, обычно это может быть кнопка в настройках пользователя)
+  // Пример очистки данных
+  document.getElementById('clear-cookies').addEventListener('click', () => {
+      localStorage.removeItem('cookiesAccepted');
+      location.reload(); // Перезагрузка страницы для повторного показа поп-апа
   });
 });
