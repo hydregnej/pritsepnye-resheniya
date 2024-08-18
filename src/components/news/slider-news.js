@@ -16,7 +16,7 @@
 //       <div class="news__text">
 //         <p>${elem.text}</p>
 //       </div>
-//       <button class="news__btn-more"><a class="news__btn-more-link" href="./current-news.html">Подробнее</a></button>
+//       <button class="news__btn-more"><a class="news__btn-more-link" href="/current-news">Подробнее</a></button>
 //     `;
 //     newsContainer.appendChild(newsElem);
 //   });

@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             
           <div class="availability__item-btns-2">
             <a href="./pdf/${pdf}.pdf" class="card-btn pdf pdf__hidden" target="blank">Открыть PDF</a>
-            <a href="./product.html?category=availability&id=${index}" class="card-btn learn card-btn__availability">подробнее</a>
+            <a href="/product?category=availability&id=${index}" class="card-btn learn card-btn__availability">подробнее</a>
            </div>
 
         </div>

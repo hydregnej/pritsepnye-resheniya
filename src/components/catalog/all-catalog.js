@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="catalog__card-title">${card.title}</div>
                 
                 <div class="catalog__card-buttons">
-                    <a href="./product.html?category=${category}&id=${index}" class="card-btn learn">подробнее</a>
+                    <a href="/product?category=${category}&id=${index}" class="card-btn learn">подробнее</a>
                 </div>
             `;
       cardContainer.appendChild(cardElement);
