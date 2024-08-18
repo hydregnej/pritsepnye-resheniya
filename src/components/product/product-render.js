@@ -1,6 +1,6 @@
 import catalogData from '../data-product/data-product';
 
-// document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get('category');
 const productId = urlParams.get('id');
@@ -133,4 +133,4 @@ if (category && productId) {
   const productDetailsContainer = document.getElementById('product-details');
   productDetailsContainer.innerHTML = '<p>Продукт не найден</p>';
 }
-// });
+});
