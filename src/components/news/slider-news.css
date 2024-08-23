@@ -1,19 +1,19 @@
-.news__wrapper,
-.news-page_container {
+.slider-news__wrapper,
+.slider-news-page_container {
   width: 90%;
   position: relative;
 }
 
-.news__title {
+.slider-news__title {
   position: relative;
   display: inline-block;
-  font-size: 66px;
+  font-size: var(--news-title-font-size);
   font-weight: bold;
   margin: 0 auto;
   margin-bottom: 102px;
 }
 
-.news__container {
+.slider-news__container {
   flex-direction: column;
   align-items: center;
   margin-top: 133px;
@@ -25,11 +25,11 @@
   justify-content: space-evenly;
 }
 
-.news-swiper {
+.slider-news-swiper {
   width: 92%;
 }
 
-.news-swiper-slide {
+.slider-news-swiper-slide {
   display: flex;
   flex-direction: column;
   height: auto;
@@ -37,7 +37,7 @@
   transition: box-shadow 0.3s ease;
 }
 
-.news-img {
+.slider-news-img {
   width: 100%;
 }
 
@@ -49,52 +49,23 @@
   color: #D4252C;
 }
 
-.news__date {
+.slider-news__date {
   font-size: 24px;
   font-weight: 600;
   color: #D4252C;
   margin-bottom: 10px;
 }
 
-.news__text {
+.slider-news__text {
   line-height: 1.5;
   flex-grow: 1;
 }
 
-.news__text p {
+.slider-news__text p {
   font-size: 21px;
 }
 
-.news-page__title {
-  width: 100%;
-  font-size: 66px;
-  font-weight: bold;
-  margin-bottom: 102px;
-  text-align: center;
-}
-
-.news-page {
-  margin: 0 auto;
-}
-
-.main-container {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.news-page__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2%;
-}
-
-.news-page__item {
-  width: 32%;
-  height: auto;
-  margin-bottom: 55px;
-}
-
-.news__btn-more {
+.slider-news__btn-more {
   border: none;
   background-color: #D4252C;
   text-transform: uppercase;
@@ -107,46 +78,79 @@
   margin-top: 20px;
 }
 
-.news__btn-more-link {
+.slider-news__btn-more-link {
   color: #ffffff;
   text-decoration: none;
 }
 
-.news__btn-more-link:hover {
+.slider-news__btn-more-link:hover {
   color: inherit;
 }
 
-.news__btn-more:hover {
+.slider-news__btn-more:hover {
   background-color: #000000;
   color: #ffffff;
 }
 
+.slider-news-page__title {
+  width: 100%;
+  font-size: var(--news-title-font-size);
+  font-weight: bold;
+  margin-bottom: 102px;
+  text-align: center;
+}
+
+.slider-news-page {
+  margin: 0 auto;
+}
+
+/* .main-container {
+  width: 90%;
+  margin: 0 auto;
+} */
+
+.slider-news-page__container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.slider-news-page__item {
+  width: 32%;
+  height: auto;
+  margin-bottom: 55px;
+}
+
 @media (max-width: 1300px) {
-  .news__container {
+  :root {
+    --news-title-font-size: 36px;
+  }
+
+  .slider-news__container {
     width: 100%;
   }
 
-  .news__title {
+  .slider-news__title {
     font-size: 36px;
   }
 
-  .news__title {
+  .slider-news__title {
     margin-bottom: 45px;
   }
 
-  .news__wrapper {
+  .slider-news__wrapper {
     width: 100%;
   }
 
-  .news__date {
+  .slider-news__date {
     font-size: 18px;
   }
 
-  .news__text p {
+  .slider-news__text p {
     font-size: 15px;
   }
 
-  .news__btn-more {
+  .slider-news__btn-more {
     font-size: 14px;
   }
 
@@ -173,24 +177,23 @@
     top: 40%;
   }
 
-  .news__btn-more {
+  .slider-news__btn-more {
     width: 86px;
     height: 23px;
     font-size: 9px;
   }
 
-  .news__date {
+  .slider-news__date {
     font-size: 13px;
   }
 
-  .news__text p {
+  .slider-news__text p {
     font-size: 12px;
   }
-
 }
 
 @media (max-width: 880px) {
-  .news__btn-more {
+  .slider-news__btn-more {
     width: 68px;
     height: 18px;
     font-size: 7px;
@@ -216,15 +219,15 @@
 }
 
 @media (max-width: 780px) {
-  .news__title {
+  .slider-news__title {
     font-size: 25px;
   }
 
-  .news__date {
+  .slider-news__date {
     font-size: 11px;
   }
 
-  .news__text p {
+  .slider-news__text p {
     font-size: 9px;
     line-height: 0.9;
   }
@@ -257,7 +260,11 @@
 }
 
 @media (max-width: 590px) {
-  .news__title {
+  :root {
+    --news-title-font-size: 26px;
+  }
+
+  .slider-news__title {
     font-size: 20px;
   }
 
@@ -268,22 +275,28 @@
 }
 
 @media (max-width: 425px) {
-  .news__btn-more {
+  .slider-news__btn-more {
     font-size: 5px;
     width: 58px;
     height: 13px;
   }
 
-  .news__date {
+  .slider-news__date {
     font-size: 8px;
   }
 
-  .news__text p {
+  .slider-news__text p {
     font-size: 7px;
   }
 
   .swiper-button-next::after,
   .swiper-button-prev::after {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 385px) {
+  :root {
+    --news-title-font-size: 25px;
   }
 }

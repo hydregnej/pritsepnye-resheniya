@@ -1,16 +1,31 @@
-import catalogData from '../data-product/data-product';
+// файл product-render.js
+
+import catalogData from '../data/data-product';
 
 document.addEventListener('DOMContentLoaded', () => {
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get('category');
 const productId = urlParams.get('id');
+const canonicalLink = document.createElement('link');
+
+canonicalLink.rel = 'canonical';
+canonicalLink.href = `https://pricepresh74.ru/product?category=${category}&id=${productId}`;
+document.head.appendChild(canonicalLink);
+
 
 if (category && productId) {
   const headTitle = document.querySelector('title');
+  const metaDescription = document.querySelector('meta[name="description"]') || document.createElement('meta');
 
   const { title, inStock, additionalImages, descriptionTitle, descriptionMain, descriptionOptional, maximumLoadWeight, workingPlatformLength, suspension, ramps } = catalogData[category][productId];
 
   headTitle.innerText = `Прицепные Решения ДТ - ${title}`;
+
+  metaDescription.name = 'description';
+  metaDescription.content = `${descriptionTitle} 8 (800) 505-44-34 - Узнайте больше о технических характеристиках и получите консультацию по телефону.`;
+  if (!document.querySelector('meta[name="description"]')) {
+    document.head.appendChild(metaDescription);
+  }
 
   const productDetailsContainer = document.getElementById('product-details');
 

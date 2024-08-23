@@ -12,34 +12,42 @@ module.exports = {
     catalog: './src/catalog.js',
     vseVNalichii: './src/vse-v-nalichii.js',
     product: './src/product.js',
+    news: './src/news.js',
+    currentNews: './src/current-news.js',
     about: './src/about.js',
     contacts: './src/contacts.js',
     privacyPolicy: './src/privacy-policy.js',
   },
   output: {
-    filename: '[name].[contenthash].js',
+    //prod
+    // filename: '[name].[contenthash].js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  // devServer: {
-  //   static: './dist',
-  //   compress: true,
-  //   open: true,
-  //   proxy: [
-  //     {
-  //       context: ['/api/send-message'],
-  //       target: 'http://localhost:3000',
-  //       secure: true,
-  //       changeOrigin: true, // Нужно для изменения заголовка Origin в запросе
-  //     }
-  //   ],
-  // },
-  mode: 'production',
-  // mode: 'development',
+  devServer: {
+    static: './dist',
+    compress: true,
+    open: true,
+    hot: true,
+    liveReload: true,
+    proxy: [
+      {
+        context: ['/api/send-message'],
+        target: 'http://localhost:3000',
+        secure: true,
+        changeOrigin: true, // Нужно для изменения заголовка Origin в запросе
+      }
+    ],
+  },
+  // mode: 'production',
+  mode: 'development',
   devtool: false,
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      //prod
+      // filename: '[name].[contenthash].css',
+      filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -48,9 +56,9 @@ module.exports = {
       title: 'Прицепные Решения',
       inject: 'body',
       meta: {
-        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов в Челябинске. Мы предлагаем качественные прицепы для легковых, грузовых и коммерческих нужд. Обратитесь к нам для надежных и проверенных решений',
+        description: 'Поставщик полуприцепов-тяжеловозов ООО «Прицепные Решения ДТ»: Широкий выбор надежных полуприцепов высокого качества. Звоните 8 (800) 505-44-34.',
         robots: 'index, follow',
-        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+        author: 'ООО «Прицепные Решения ДТ»'
       }
     }),
     new HtmlWebpackPlugin({
@@ -60,9 +68,9 @@ module.exports = {
       title: 'Каталог',
       inject: 'body',
       meta: {
-        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        description: 'Надежные полуприцепы-тяжеловозы от ООО «Прицепные Решения ДТ»: Откройте наш каталог и выберите полуприцеп, который идеально подойдет вам. Получите консультацию и актуальные предложения по телефону 8 (800) 505-44-34.',
         robots: 'index, follow',
-        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+        author: 'ООО «Прицепные Решения ДТ»'
       }
     }),
     new HtmlWebpackPlugin({
@@ -72,9 +80,9 @@ module.exports = {
       title: 'В наличии',
       inject: 'body',
       meta: {
-        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        description: 'Узнайте о наличии полуприцепов-тяжеловозов в ООО «Прицепные Решения ДТ»: Мы обновляем информацию о товарах регулярно. Проверьте наши предложения и получите ответы на все вопросы по телефону 8 (800) 505-44-34.',
         robots: 'index, follow',
-        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+        author: 'ООО «Прицепные Решения ДТ»'
       }
     }),
     new HtmlWebpackPlugin({
@@ -84,21 +92,31 @@ module.exports = {
       title: 'Продукт',
       inject: 'body',
       meta: {
-        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
         robots: 'index, follow',
-        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+        author: 'ООО «Прицепные Решения ДТ»'
       }
     }),
     new HtmlWebpackPlugin({
-      filename: 'about.html',
-      template: './src/pages/about.html',
-      chunks: ['about'],
-      title: 'О нас',
+      filename: 'news.html',
+      template: './src/pages/news.html',
+      chunks: ['news'],
+      title: 'Новости',
       inject: 'body',
       meta: {
-        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        description: 'Читайте все последние новости компании «Прицепные Решения ДТ»: обновления продукции, инновации в области полуприцепов и актуальные события. Будьте в курсе наших новостей и предложений.',
         robots: 'index, follow',
-        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+        author: 'ООО «Прицепные Решения ДТ»'
+      }
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'current-news.html',
+      template: './src/pages/current-news.html',
+      chunks: ['currentNews'],
+      title: 'Текущая новость',
+      inject: 'body',
+      meta: {
+        robots: 'index, follow',
+        author: 'ООО «Прицепные Решения ДТ»'
       }
     }),
     new HtmlWebpackPlugin({
@@ -108,9 +126,9 @@ module.exports = {
       title: 'Контакты',
       inject: 'body',
       meta: {
-        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        description: 'Получите информацию о полуприцепах и тяжеловозах от ООО «Прицепные Решения ДТ»: Мы готовы ответить на ваши вопросы и предоставить помощь. Свяжитесь с нами по телефону 8 (800) 505-44-34 или через форму обратной связи на сайте.',
         robots: 'index, follow',
-        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+        author: 'ООО «Прицепные Решения ДТ»'
       }
     }),
     new HtmlWebpackPlugin({
@@ -120,9 +138,9 @@ module.exports = {
       title: 'Политикой конфиденциальности',
       inject: 'body',
       meta: {
-        description: 'ООО &quot;Прицепные Решения ДТ&quot; — ведущий производитель и поставщик прицепов. Мы предлагаем широкий ассортимент прицепов для различных нужд: от легковых до коммерческих. Высокое качество, надежность и индивидуальный подход к каждому клиенту.',
+        description: 'Политика конфиденциальности ООО «Прицепные Решения ДТ»: Узнайте, как мы защищаем ваши личные данные и обеспечиваем безопасность информации. Ознакомьтесь с нашими мерами и правилами на сайте.',
         robots: 'index, follow',
-        author: 'ООО &quot;Прицепные Решения ДТ&quot;'
+        author: 'ООО «Прицепные Решения ДТ»'
       }
     }),
     new CopyWebpackPlugin({
@@ -130,6 +148,8 @@ module.exports = {
         { from: 'src/assets/icons', to: 'icons' },
         { from: 'src/assets/image', to: 'image' },
         { from: 'src/assets/pdf', to: 'pdf' },
+        { from: 'src/robots.txt', to: 'robots.txt' },
+        { from: 'src/sitemap.xml', to: 'sitemap.xml' }
       ],
     }),
   ],
@@ -138,7 +158,9 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          'style-loader', // Используйте style-loader для разработки
+          //prod
+          // MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader'
         ],

@@ -1,3 +1,8 @@
+:root {
+  --news-main-title-margin-bot: 70px;
+  --news-title-font-size: 66px;
+}
+
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
@@ -104,6 +109,10 @@
 }
 
 @media (max-width: 1300px) {
+  :root {
+    --news-main-title-margin-bot: 30px;
+  }
+
   .card-btn {
     font-size: 14px;
     width: 110px;
@@ -139,6 +148,12 @@
     font-size: 11px;
     height: 30px;
     width: 90px;
+  }
+}
+
+@media (max-width: 590px) {
+  :root {
+    --news-main-title-margin-bot: 10px;
   }
 }
 

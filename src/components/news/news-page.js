@@ -1,3 +1,46 @@
+import newsData from '../data/data-news';
+
+document.addEventListener('DOMContentLoaded', function () {
+  const newsContainer = document.querySelector('.news-page__container');
+
+  const showNews = (articles) => {
+    newsContainer.innerHTML = '';
+
+    articles.forEach((article, index) => {
+      const paragraphs = article.content
+      .split('# #')
+      .map(paragraph => paragraph.trim())
+      .filter(paragraph => paragraph.length > 0) // Удаление пустых строк
+      .map(paragraph => paragraph.replace(/^#\s*/, '').replace(/\s*#$/, '')) // Удаление начальных и конечных #
+      .join('');
+
+      const articleElement = document.createElement('div');
+      articleElement.classList.add('news-page__article');
+
+      articleElement.innerHTML = `
+        <img src="${article.imgSrc}" alt="Фото: ${article.title}" class="news-page__article-img">
+        <div class="news-page__article-date">${article.date}</div>
+        <h2 class="news-page__article-title">${article.title}</h2>
+        <p class="news-page__article-text">${paragraphs}</p>
+
+      
+        <div class="news-page__article-buttons">
+          <a href="/current-news?id=${index}" class="card-btn learn news-page__article-link">Читать далее</a>
+        </div>
+
+        
+      `;
+      newsContainer.appendChild(articleElement);
+    });
+  };
+
+  showNews(newsData);
+});
+
+
+
+// import newsData from '../data/data-news';
+
 // const getNewsValues = (elems) => {
 // 	const newsPageContainer = document.querySelector(".news-page__container");
 

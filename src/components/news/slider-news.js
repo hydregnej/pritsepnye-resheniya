@@ -1,58 +1,36 @@
-// const getNewsValues = (elems) => {
-//   const newsContainer = document.querySelector(".news-swiper-wrapper");
+// const getSliderNewsValues = (elems) => {
+//   const sliderNewsContainer = document.querySelector(".slider-news-swiper-wrapper");
 
 //   elems.forEach((elem) => {
-//     const newsElem = document.createElement("div")
-//     newsElem.classList.add("swiper-slide")
-//     newsElem.classList.add("news-swiper-slide")
+//     const sliderNewsElem = document.createElement("div");
+//     sliderNewsElem.classList.add("swiper-slide");
+//     sliderNewsElem.classList.add("slider-news-swiper-slide");
 
-//     newsElem.innerHTML = `
-//       <div class="news__img">
-//         <img class="news-img" src="${elem.img}" alt="photo news">
+//     sliderNewsElem.innerHTML = `
+//       <div class="slider-news__img">
+//         <img class="slider-news-img" src="${elem.img}" alt="photo news">
 //       </div>
-//       <div class="news__date">
+//       <div class="slider-news__date">
 //         <span>${elem.date}</span>
 //       </div>
-//       <div class="news__text">
+//       <div class="slider-news__text">
 //         <p>${elem.text}</p>
 //       </div>
-//       <button class="news__btn-more"><a class="news__btn-more-link" href="/current-news">Подробнее</a></button>
+//       <button class="slider-news__btn-more">
+//         <a class="slider-news__btn-more-link" href="/current-news">Подробнее</a>
+//       </button>
 //     `;
-//     newsContainer.appendChild(newsElem);
+//     sliderNewsContainer.appendChild(sliderNewsElem);
 //   });
 // };
 
 // const elems = [
-//   {
-//     img: "./image/news-example-img.png",
-//     date: "5 марта 2023",
-//     text: "Новая модель прицепа от компании XYZ: еще более надежная и функциональная!",
-//   },
-//   {
-//     img: "./image/news-example-img1.png",
-//     date: "4 марта 2023",
-//     text: "Увеличение производственных мощностей компании XYZ: новые возможности для заказчиков!",
-//   },
-//   {
-//     img: "./image/news-example-img.png",
-//     date: "3 марта 2023",
-//     text: "Новая модель прицепа от компании XYZ: еще более надежная и функциональная!",
-//   },
-//   {
-//     img: "./image/news-example-img1.png",
-//     date: "2 марта 2023",
-//     text: "Увеличение производственных мощностей компании XYZ: новые возможности для заказчиков!",
-//   },
-//   {
-//     img: "./image/news-example-img.png",
-//     date: "1 марта 2023",
-//     text: "Новая модель прицепа от компании XYZ: еще более надежная и функциональная!",
-//   },
+//   // массив элементов
 // ];
 
-// getNewsValues(elems);
+// getSliderNewsValues(elems);
 
-// const newsSwiper = new Swiper('.news-swiper', {
+// const sliderNewsSwiper = new Swiper('.slider-news-swiper', {
 //   slidesPerView: 3,
 //   spaceBetween: 20,
 //   loop: true,

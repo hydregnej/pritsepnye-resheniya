@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://pricepresh74.ru/sitemap.xml
