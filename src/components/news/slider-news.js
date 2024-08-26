@@ -1,43 +1,60 @@
-// const getSliderNewsValues = (elems) => {
-//   const sliderNewsContainer = document.querySelector(".slider-news-swiper-wrapper");
+import newsData from '../data/data-news.js';
 
-//   elems.forEach((elem) => {
-//     const sliderNewsElem = document.createElement("div");
-//     sliderNewsElem.classList.add("swiper-slide");
-//     sliderNewsElem.classList.add("slider-news-swiper-slide");
+document.addEventListener("DOMContentLoaded", () => {
+  const swiperWrapper = document.querySelector('.slider-news__swiper-wrapper');
 
-//     sliderNewsElem.innerHTML = `
-//       <div class="slider-news__img">
-//         <img class="slider-news-img" src="${elem.img}" alt="photo news">
-//       </div>
-//       <div class="slider-news__date">
-//         <span>${elem.date}</span>
-//       </div>
-//       <div class="slider-news__text">
-//         <p>${elem.text}</p>
-//       </div>
-//       <button class="slider-news__btn-more">
-//         <a class="slider-news__btn-more-link" href="/current-news">Подробнее</a>
-//       </button>
-//     `;
-//     sliderNewsContainer.appendChild(sliderNewsElem);
-//   });
-// };
+  newsData.forEach((newsItem, index) => {
+    const paragraphs = newsItem.content
+      .split('# #')
+      .map(paragraph => paragraph.trim())
+      .filter(paragraph => paragraph.length > 0) // Удаление пустых строк
+      .map(paragraph => paragraph.replace(/^#\s*/, '').replace(/\s*#$/, '')) // Удаление начальных и конечных #
+      .join('');
 
-// const elems = [
-//   // массив элементов
-// ];
+    const slide = document.createElement('div');
+    slide.classList.add('swiper-slide', 'slider-news__swiper-slide');
 
-// getSliderNewsValues(elems);
+    slide.innerHTML = `
+      <div class="news-card news-card__slider">
+        <img src="${newsItem.imgSrc}" alt="Фото: ${newsItem.title}" class="news-img">
+        <div class="news-date">${newsItem.date}</div>
+        <h2 class="news-title">${newsItem.title}</h2>
+        <p class="news-text">${paragraphs}</p>
+        <div class="news-buttons">
+          <a href="/current-news?id=${index}" class="card-btn learn news-link">Читать далее</a>
+        </div>
+      </div>
+    `;
 
-// const sliderNewsSwiper = new Swiper('.slider-news-swiper', {
-//   slidesPerView: 3,
-//   spaceBetween: 20,
-//   loop: true,
-//   speed: 800,
-//   easing: "ease-in-out",
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
+    swiperWrapper.appendChild(slide);
+  });
+
+  const swiper = new Swiper('.slider-news-swiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.slider-news-swiper-button-next',
+      prevEl: '.slider-news-swiper-button-prev',
+    },
+    slidesPerView: 1.5,
+    spaceBetween: 1,
+    breakpoints: {
+      490: {
+        slidesPerView: 2.2,
+        spaceBetween: 1,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 1,
+      },
+      768: {
+        slidesPerView: 2.5,
+        spaceBetween: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 3,
+      },
+    },
+
+  });
+});

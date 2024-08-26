@@ -27,7 +27,6 @@
   margin-bottom: 0.5rem;
 }
 
-/* Адаптивные стили */
 @media (max-width: 600px) {
   .policy__section-title {
     font-size: 1.25rem;

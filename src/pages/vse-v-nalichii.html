@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Прицепные Решения ДТ - Наличие полуприцепов</title>
   <link rel="icon" href="https://delotehniki74.ru/wp-content/uploads/2020/06/cropped-favicon-32x32.png" sizes="32x32">
@@ -75,8 +75,8 @@
           <ul class="nav-header__menu-links">
             <li class="nav-header__item nav-header__item--dropdown-catalog">
               <a href="/catalog" class="nav-header__link">Каталог</a>
-              <div class="header-menu__unwrap">
-                <ul class="header-menu__lists">
+              <div class="header-menu__unwrap header-menu__unwrap_catalog">
+                <ul class="header-menu__lists header-menu__lists_catalog">
                   <li class="header-menu__item">
                     <a href="/catalog#low" class="header-menu__link">Низкорамные</a>
                   </li>
@@ -95,17 +95,7 @@
             <li class="nav-header__item">
               <a href="/vse-v-nalichii" class="nav-header__link">Наличие</a>
             </li>
-            <li class="nav-header__item">
-              <a href="/about" class="nav-header__link">О нас</a>
-              <div class="header-menu__unwrap">
-                <ul class="header-menu__lists">
-                  <li class="header-menu__item"><a href="#" class="header-menu__link">О компании</a></li>
-                  <li class="header-menu__item"><a href="#" class="header-menu__link">Производство</a></li>
-                  <li class="header-menu__item"><a href="#" class="header-menu__link">Новости</a></li>
-                </ul>
-              </div>
-            </li>
-            <!-- <li class="nav-header__item nav-header__item--dropdown-about">
+            <!-- <li class="nav-header__item">
               <a href="/about" class="nav-header__link">О нас</a>
               <div class="header-menu__unwrap">
                 <ul class="header-menu__lists">
@@ -115,6 +105,17 @@
                 </ul>
               </div>
             </li> -->
+
+            <li class="nav-header__item nav-header__item--dropdown-about">
+              <a href="/about" class="nav-header__link">О нас</a>
+              <div class="header-menu__unwrap header-menu__unwrap_about">
+                <ul class="header-menu__lists header-menu__lists_about">
+                  <li class="header-menu__item"><a href="/about" class="header-menu__link">О компании</a></li>
+                  <li class="header-menu__item"><a href="/news" class="header-menu__link">Новости</a></li>
+                </ul>
+              </div>
+            </li>
+
             <li class="nav-header__item"><a href="/contacts" class="nav-header__link">Контакты</a></li>
           </ul>
         </nav>
@@ -161,9 +162,22 @@
               <a href="/vse-v-nalichii" class="modal-nav__link">Наличие</a>
             </li>
 
-            <li class="modal-nav__item">
+            <!-- <li class="modal-nav__item">
               <div class="modal-nav__list modal-nav-about-us">
                 <a href="/about" class="modal-nav__link">О нас</a>
+              </div>
+            </li> -->
+
+            <li class="modal-nav__item modal-nav__item--dropdown-about">
+              <div class="modal-nav__list modal-nav-about-us">
+                <a href="/about" class="modal-nav__link">О нас</a>
+                <img src="./icons/down_dlxa.svg" alt="Развернуть список" class="modal-nav__list-img">
+              </div>
+              <div class="modal-menu modal-menu__about-us">
+                <ul class="modal-menu__lists">
+                  <li class="modal-menu__item"><a href="/about" class="modal-menu__link">О компании</a></li>
+                  <li class="modal-menu__item"><a href="/news" class="modal-menu__link">Новости</a></li>
+                </ul>
               </div>
             </li>
 

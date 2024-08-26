@@ -20,34 +20,35 @@ module.exports = {
   },
   output: {
     //prod
-    // filename: '[name].[contenthash].js',
-    filename: '[name].js',
+    filename: '[name].[contenthash].js',
+    // filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  devServer: {
-    static: './dist',
-    compress: true,
-    open: true,
-    hot: true,
-    liveReload: true,
-    proxy: [
-      {
-        context: ['/api/send-message'],
-        target: 'http://localhost:3000',
-        secure: true,
-        changeOrigin: true, // Нужно для изменения заголовка Origin в запросе
-      }
-    ],
-  },
-  // mode: 'production',
-  mode: 'development',
+  // devServer: {
+  //   static: './dist',
+  //   compress: true,
+  //   open: true,
+  //   hot: false,
+  //   liveReload: true,
+  //   watchFiles: ['src/**/*.html'],
+  //   proxy: [
+  //     {
+  //       context: ['/api/send-message'],
+  //       target: 'http://localhost:3000',
+  //       secure: true,
+  //       changeOrigin: true, // Нужно для изменения заголовка Origin в запросе
+  //     }
+  //   ],
+  // },
+  mode: 'production',
+  // mode: 'development',
   devtool: false,
   plugins: [
     new MiniCssExtractPlugin({
       //prod
-      // filename: '[name].[contenthash].css',
-      filename: '[name].css',
+      filename: '[name].[contenthash].css',
+      // filename: '[name].css',
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -120,6 +121,18 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
+      filename: 'about.html',
+      template: './src/pages/about.html',
+      chunks: ['about'],
+      title: 'О нас',
+      inject: 'body',
+      meta: {
+        description: 'ООО «Прицепные Решения ДТ» — эксперт в полуприцепах-тяжеловозах: Доверьтесь нашему опыту и качеству продукции. Мы обеспечиваем надежные решения для вашего бизнеса. Контактный телефон 8 (800) 505-44-34.',
+        robots: 'index, follow',
+        author: 'ООО «Прицепные Решения ДТ»'
+      }
+    }),
+    new HtmlWebpackPlugin({
       filename: 'contacts.html',
       template: './src/pages/contacts.html',
       chunks: ['contacts'],
@@ -158,9 +171,9 @@ module.exports = {
       {
         test: /\.css$/i,
         use: [
-          'style-loader', // Используйте style-loader для разработки
+          // 'style-loader',
           //prod
-          // MiniCssExtractPlugin.loader,
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader'
         ],

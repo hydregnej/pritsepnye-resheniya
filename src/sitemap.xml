@@ -3,7 +3,7 @@
   <!-- Главная страница -->
   <url>
     <loc>https://pricepresh74.ru/</loc>
-    <lastmod>2024-08-21</lastmod>
+    <lastmod>2024-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- Страница каталога -->
   <url>
     <loc>https://pricepresh74.ru/catalog</loc>
-    <lastmod>2024-08-21</lastmod>
+    <lastmod>2024-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -19,7 +19,7 @@
   <!-- Страница "В наличии" -->
   <url>
     <loc>https://pricepresh74.ru/vse-v-nalichii</loc>
-    <lastmod>2024-08-21</lastmod>
+    <lastmod>2024-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -27,15 +27,31 @@
   <!-- Страница продукта -->
   <url>
     <loc>https://pricepresh74.ru/product</loc>
-    <lastmod>2024-08-21</lastmod>
+    <lastmod>2024-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  
+    <!-- Страница "Новости" -->
+  <url>
+    <loc>https://pricepresh74.ru/news</loc>
+    <lastmod>2024-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Страница "Текущая новость" -->
+  <url>
+    <loc>https://pricepresh74.ru/current-news</loc>
+    <lastmod>2024-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <!-- Страница "О нас" -->
   <url>
     <loc>https://pricepresh74.ru/about</loc>
-    <lastmod>2024-08-21</lastmod>
+    <lastmod>2024-08-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -43,7 +59,7 @@
   <!-- Страница контактов -->
   <url>
     <loc>https://pricepresh74.ru/contacts</loc>
-    <lastmod>2024-08-21</lastmod>
+    <lastmod>2024-08-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -51,7 +67,7 @@
   <!-- Политика конфиденциальности -->
   <url>
     <loc>https://pricepresh74.ru/privacy-policy</loc>
-    <lastmod>2024-08-21</lastmod>
+    <lastmod>2024-08-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

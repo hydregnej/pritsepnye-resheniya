@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
+//Анимация при наведении
 document.addEventListener('DOMContentLoaded', () => {
   const dropdownItems = document.querySelectorAll('.nav-header__item--dropdown-catalog, .nav-header__item--dropdown-about');
 

@@ -51,9 +51,6 @@
   font-weight: bold;
   margin: 0 auto;
   margin-bottom: 102px;
-  /* border: 4px solid #d4252c; */
-  /* border-radius: 15px; */
-  /* padding: 20px; */
 }
 
 .availability__title:after {
@@ -74,7 +71,6 @@
 }
 
 .trailer-img {
-  /* width: 100%; */
   padding: 0 20px;
 }
 
@@ -341,11 +337,6 @@
 }
 
 @media (max-width: 590px) {
-  .availability__title {
-    /* font-size: 25px; */
-    /* padding: 12px; */
-  }
-
   .availability__title:before {
     content: '';
     position: absolute;
@@ -362,7 +353,6 @@
     transition: width 2s ease-in-out, left 2s ease-in-out;
   }
 
-  /* ----------------------------- */
   .availability-animate:before {
     top: -10px;
     left: -100px;
@@ -432,11 +422,5 @@
 @media (max-width: 340px) {
   :root {
     --property-list-text: 11px;
-  }
-
-  .pdf {
-    /* font-size: 11px;
-    height: 30px;
-    width: 90px; */
   }
 }
