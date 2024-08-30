@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .map(paragraph => paragraph.replace(/^#\s*/, '').replace(/\s*#$/, '')) // Удаление начальных и конечных #
         .map(paragraph => `<p>${paragraph}</p>`)
         .join('');
-        
+
       const contentElement = document.createElement('div');
 
       contentElement.innerHTML = `
@@ -72,17 +72,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
       newsDetailsContainer.prepend(contentElement);
 
-      new Swiper('.current-news-gallery', {
-        spaceBetween: 10,
-        freeMode: true,
-        slidesPerView: 1.5,
-        breakpoints: {
-          690: {
-            slidesPerView: 2.5,
+      if (additionalImages.length === 1) {
+        document.querySelector('.current-news__swiper-slide-img').style.width = '70%'
+
+        window.addEventListener('resize', () => {
+
+          if (window.innerWidth <= 825) {
+            document.querySelector('.current-news__swiper-slide-img').style.width = '100%'
+          } else {
+            document.querySelector('.current-news__swiper-slide-img').style.width = '75%'
+          }
+
+        })
+
+      } else {
+        new Swiper('.current-news-gallery', {
+          spaceBetween: 10,
+          freeMode: true,
+          slidesPerView: 1.5,
+          breakpoints: {
+            690: {
+              slidesPerView: 2.5,
+            },
           },
-        },
-      });
-      
+        });
+      }
 
     } else {
       const newsDetailsContainer = document.getElementById('news-details');

@@ -3,6 +3,11 @@ import newsData from '../data/data-news.js';
 document.addEventListener("DOMContentLoaded", () => {
   const swiperWrapper = document.querySelector('.slider-news__swiper-wrapper');
 
+  if (newsData.length <= 3) {
+    document.querySelector('.slider-news-swiper-button-prev').style.display = 'none'
+    document.querySelector('.slider-news-swiper-button-next').style.display = 'none'
+  }
+
   newsData.forEach((newsItem, index) => {
     const paragraphs = newsItem.content
       .split('# #')
@@ -57,4 +62,5 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
   });
+
 });

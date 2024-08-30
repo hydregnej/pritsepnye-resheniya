@@ -21,7 +21,7 @@ async function sendEmailToServer(event) {
   const processedData = {
     name: processSpaces(name),
     email: processSpaces(email),
-    phone: processSpaces(phone),
+    phone: processSpaces(phone),  
     subject: processSpaces(subject),
     message: processSpaces(message)
   };
